@@ -31,12 +31,6 @@
     path: /Audio/_Spacious/Lobby/blast01.ogg
 
 - type: jukebox
-  id: BigRush
-  name: Nickzil - Big Rush
-  path:
-    path: /Audio/_Spacious/Lobby/big_rush.ogg
-
-- type: jukebox
   id: Caravan
   name: Nickzil - Caravan
   path:
