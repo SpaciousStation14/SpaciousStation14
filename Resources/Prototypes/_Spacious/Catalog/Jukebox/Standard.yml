@@ -1,22 +1,28 @@
 # Sorted alphabetically
 
 - type: jukebox
-  id: Again
-  name: Nickzil - Again
-  path:
-    path: /Audio/_Spacious/Lobby/again.ogg
-
-- type: jukebox
   id: Adrenaline
   name: Nickzil - Adrenaline
   path:
     path: /Audio/_Spacious/Lobby/adrenaline.ogg
 
 - type: jukebox
+  id: Again
+  name: Nickzil - Again
+  path:
+    path: /Audio/_Spacious/Lobby/again.ogg
+
+- type: jukebox
   id: AutumnChills
   name: Nickzil - Autumn Chills
   path:
     path: /Audio/_Spacious/Lobby/autumn_chills.ogg
+
+- type: jukebox
+  id: BakerboySwagger
+  name: Nickzil - Bakerboy Swagger
+  path:
+    path: /Audio/_Spacious/Lobby/bakerboy_swagger.ogg
 
 - type: jukebox
   id: BigRush

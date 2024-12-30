@@ -1,0 +1,9 @@
+- files: ["Patricia_Taxxon_-_Minute.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Minute by Patricia Taxxon off the album 'Aeroplane'"
+  source: "https://patriciataxxon.bandcamp.com/track/minute"
+
+- files: ["thestation.ogg"]
+  license: "CC0-1.0"
+  copyright: "The Station by A-Guy, converted from mp3 to OGG"
+  source: "https://github.com/A-Guy173/Music/blob/main/thestation.mp3"

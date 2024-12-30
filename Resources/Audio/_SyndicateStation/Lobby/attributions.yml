@@ -1,0 +1,4 @@
+- files: ["Cyclic.ogg", "Epilogue.ogg", "Intermission.ogg", "Pulse.ogg", "Resonance.ogg", "Return.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "Music created by Eagle for Syndicate Station, using AI music generator Udio v1.5"
+  source: "https://github.com/Eagle-0/Syndicate-Station/tree/master/Resources/Audio/Lobby"

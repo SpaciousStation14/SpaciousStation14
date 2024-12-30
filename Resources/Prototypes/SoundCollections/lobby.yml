@@ -1,48 +1,53 @@
 - type: soundCollection
   id: LobbyMusic
   files:
-    # Spacious Station: Use only custom lobby music
     #- /Audio/Lobby/434387_Time_Lapse_of_Clouds.ogg
-    # - /Audio/Lobby/a_different_reality_lagoona_remix.xm.ogg
-    # - /Audio/Lobby/aggravated.it.ogg
-    # - /Audio/Lobby/autumnal_equinox.xm.ogg
-    # - /Audio/Lobby/comet_haley.ogg
+    - /Audio/Lobby/a_different_reality_lagoona_remix.xm.ogg
+    - /Audio/Lobby/aggravated.it.ogg
+    - /Audio/Lobby/autumnal_equinox.xm.ogg
+    - /Audio/Lobby/comet_haley.ogg
     #- /Audio/Lobby/drozerix_-_alone.xm.ogg
-    # - /Audio/Lobby/drozerix_-_leisurely_voice.xm.ogg
-    # - /Audio/Lobby/endless_space.ogg
-    # - /Audio/Lobby/marhaba.ogg
-    # - /Audio/Lobby/melcom-cyberpunk.it.ogg
-    # - /Audio/Lobby/midori_-_conundrum_final.it.ogg
-    # - /Audio/Lobby/mod.flip-flap.ogg
-    # - /Audio/Lobby/psirius_-_nights_of_orion.xm.ogg
-    #- /Audio/Lobby/psirius_-_nymphs_of_the_forest.mptm.ogg
-    # - /Audio/Lobby/superposition.ogg
-    # - /Audio/Lobby/hackers.ogg
-    # - /Audio/Lobby/every_light_is_blinking_at_once.ogg
-    # - /Audio/Lobby/DOS=HIGH,_UMB.ogg
-    # - /Audio/Lobby/atomicamnesiammx.ogg
-    # - /Audio/Lobby/Monument.ogg
-    # Spacious Station - Custom Lobby Music
-    # Sorted alphabetically
+    - /Audio/Lobby/drozerix_-_leisurely_voice.xm.ogg
+    - /Audio/Lobby/endless_space.ogg
+    - /Audio/Lobby/marhaba.ogg
+    - /Audio/Lobby/melcom-cyberpunk.it.ogg
+    - /Audio/Lobby/midori_-_conundrum_final.it.ogg
+    - /Audio/Lobby/mod.flip-flap.ogg
+    - /Audio/Lobby/psirius_-_nights_of_orion.xm.ogg
+    - /Audio/Lobby/psirius_-_nymphs_of_the_forest.mptm.ogg # Spacious - reenable Nymphs of the Forest
+    - /Audio/Lobby/superposition.ogg
+    - /Audio/Lobby/hackers.ogg
+    - /Audio/Lobby/every_light_is_blinking_at_once.ogg
+    - /Audio/Lobby/DOS=HIGH,_UMB.ogg
+    - /Audio/Lobby/atomicamnesiammx.ogg
+    - /Audio/Lobby/Monument.ogg
+    # Space Wizards lobby music
+    - /Audio/_SpaceWizards/Lobby/thunderdome.ogg
+    - /Audio/_SpaceWizards/Lobby/endless_space.ogg
+    - /Audio/_SpaceWizards/Lobby/space_asshole.ogg
+    - /Audio/_SpaceWizards/Lobby/pwmur.ogg
+    # Delta-V lobby music
+    - /Audio/_DeltaV/Lobby/Patricia_Taxxon_-_Minute.ogg
+    - /Audio/_DeltaV/Lobby/Patricia_Taxxon_-_Chipshop.ogg
+    - /Audio/_DeltaV/Lobby/thestation.ogg
+    # Goobstation lobby music
+    - /Audio/_Goobstation/Lobby/skubstep.ogg
+    - /Audio/_Goobstation/Lobby/skubstub.ogg
+    # Syndicate Station lobby music
+    - /Audio/_SyndicateStation/Lobby/Cyclic.ogg
+    - /Audio/_SyndicateStation/Lobby/Epilogue.ogg
+    - /Audio/_SyndicateStation/Lobby/Intermission.ogg
+    - /Audio/_SyndicateStation/Lobby/Pulse.ogg
+    - /Audio/_SyndicateStation/Lobby/Resonance.ogg
+    - /Audio/_SyndicateStation/Lobby/Return.ogg
+    # Spacious lobby music
+    - /Audio/_Spacious/Lobby/adrenaline.ogg
     - /Audio/_Spacious/Lobby/again.ogg
-    - /Audio/_Spacious/Lobby/autumn_chills.ogg
     - /Audio/_Spacious/Lobby/bakerboy_swagger.ogg
     - /Audio/_Spacious/Lobby/big_rush.ogg
     - /Audio/_Spacious/Lobby/blast01.ogg
-    - /Audio/_Spacious/Lobby/caravan.ogg
-    # - /Audio/_Spacious/Lobby/cerberus.ogg # TODO: get the music file
     - /Audio/_Spacious/Lobby/clever.ogg
-    - /Audio/_Spacious/Lobby/egomania.ogg
-    - /Audio/_Spacious/Lobby/frozen_latte.ogg
-    - /Audio/_Spacious/Lobby/hellhound.ogg
     - /Audio/_Spacious/Lobby/horrible_trailer_music.ogg
-    - /Audio/_Spacious/Lobby/juggernaut.ogg
-    - /Audio/_Spacious/Lobby/lovesick.ogg
-    - /Audio/_Spacious/Lobby/lovestruck.ogg
     - /Audio/_Spacious/Lobby/make_the_jump.ogg
-    - /Audio/_Spacious/Lobby/metro_manila.ogg
     - /Audio/_Spacious/Lobby/neverending_sombre.ogg
-    # - /Audio/_Spacious/Lobby/pastel_heart_baby.ogg # TODO: get the music file
     - /Audio/_Spacious/Lobby/pillars_of_redemption.ogg
-    - /Audio/_Spacious/Lobby/robotization.ogg
-    - /Audio/_Spacious/Lobby/starstruck.ogg
