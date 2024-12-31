@@ -22,7 +22,7 @@
     Slash: 10
     Piercing: 10
     Heat: 10
-    Structural: 80
+    Structural: 10 # Spacious - Revert structural reduction from 80 to 10
 
 - type: damageModifierSet
   id: StructuralMetallic
