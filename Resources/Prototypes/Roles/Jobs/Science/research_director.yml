@@ -28,6 +28,9 @@
           inverted: true
           traits:
             - ShadowkinBlackeye
+    - !type:CharacterSpeciesRequirement # Spacious - Human-only command
+      species:
+        - Human
   weight: 10
   startingGear: ResearchDirectorGear
   icon: "JobIconResearchDirector"

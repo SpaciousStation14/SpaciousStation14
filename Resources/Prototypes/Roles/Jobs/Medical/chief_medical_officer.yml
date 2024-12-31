@@ -27,6 +27,9 @@
         - !type:CharacterTraitRequirement
           traits:
             - ShadowkinBlackeye
+    - !type:CharacterSpeciesRequirement # Spacious - Human-only command
+      species:
+        - Human
   weight: 10
   startingGear: CMOGear
   icon: "JobIconChiefMedicalOfficer"

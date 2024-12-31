@@ -25,6 +25,9 @@
     - !type:CharacterOverallTimeRequirement # DeltaV - Playtime requirement
       min: 108000 # 30 hours
     - !type:CharacterWhitelistRequirement
+    - !type:CharacterSpeciesRequirement # Spacious - Human-only command
+      species:
+        - Human
   weight: 20
   startingGear: CaptainGear
   icon: "JobIconCaptain"

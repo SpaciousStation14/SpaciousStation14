@@ -16,6 +16,9 @@
     - !type:CharacterOverallTimeRequirement
       min: 90000 # DeltaV - 25 hours
     - !type:CharacterWhitelistRequirement
+    - !type:CharacterSpeciesRequirement # Spacious - Human-only command
+      species:
+        - Human
   weight: 10
   startingGear: HoSGear
   icon: "JobIconHeadOfSecurity"
