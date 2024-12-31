@@ -1,7 +1,7 @@
 - type: species
   id: Shadowkin
   name: species-name-shadowkin
-  roundStart: true
+  roundStart: false # Spacious - Disable Shadowkin
   prototype: MobShadowkin
   sprites: MobShadowkinSprites
   defaultSkinTone: "#FFFFFF"
