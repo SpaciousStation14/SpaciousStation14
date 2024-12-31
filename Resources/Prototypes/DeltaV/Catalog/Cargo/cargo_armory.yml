@@ -14,7 +14,7 @@
     sprite: Nyanotrasen/Objects/Weapons/Guns/Pistols/universal.rsi
     state: icon
   product: CrateArmoryUniversal
-  cost: 22500
+  cost: 6500 # Spacious - revert cost increase from 6500 to 22500
   category: Armory
   group: market
 
@@ -30,7 +30,7 @@
 
 - type: cargoProduct
   id: ArmoryEnergyGun
-  icon: 
+  icon:
     sprite: DeltaV/Objects/Weapons/Guns/Battery/energygun.rsi
     state: icon
   product: CrateArmoryEnergyGun
