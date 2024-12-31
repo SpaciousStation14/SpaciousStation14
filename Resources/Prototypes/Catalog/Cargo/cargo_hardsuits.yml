@@ -48,7 +48,7 @@
     sprite: Nyanotrasen/Clothing/OuterClothing/ReverseEngineering/syndicate.rsi
     state: icon
   product: CrateSecurityShanlinTacsuit
-  cost: 75000
+  cost: 17500 # Spacious - revert cost increase from 17500 to 75000
   category: cargoproduct-category-name-hardsuits
   group: market
 
@@ -58,7 +58,7 @@
     sprite: Nyanotrasen/Clothing/OuterClothing/ReverseEngineering/juggernaut.rsi
     state: icon
   product: CrateSecurityGuanYuTacsuit
-  cost: 125000
+  cost: 30000 # Spacious - revert cost increase from 30000 to 125000
   category: cargoproduct-category-name-hardsuits
   group: market
 
