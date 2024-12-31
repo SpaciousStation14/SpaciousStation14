@@ -5,7 +5,7 @@
   playTimeTracker: JobPrisoner
   startingGear: PrisonerGear
   alwaysUseSpawner: true
-  canBeAntag: false
+  canBeAntag: true # Spacious - enable prisoner antag
 #  whitelistRequired: true
   icon: "JobIconPrisoner"
   supervisors: job-supervisors-security
@@ -23,9 +23,11 @@
           traits:
             - ShadowkinBlackeye
   special:
-  - !type:AddComponentSpecial
-    components:
-      - type: Pacified
+  # - !type:AddComponentSpecial # Spacious - remove PacifiedComponent from prisoners
+  #   components:
+  #     - type: Pacified
+  - !type:AddImplantSpecial # Spacious - add tracking implant to prisoners
+    implants: [ TrackingImplant ]
 
 - type: startingGear
   id: PrisonerGear
