@@ -1,7 +1,6 @@
 - type: gameMapPool
   id: DefaultMapPool
   maps:
-  - Arena
   - Asterisk
   - Core
   - Edge
@@ -16,4 +15,5 @@
   - TheHive
   - Gax
   - Rad
-  - Europa
+  - Meta
+  #- Europa
