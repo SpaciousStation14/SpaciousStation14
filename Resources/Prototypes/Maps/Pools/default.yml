@@ -1,6 +1,7 @@
 - type: gameMapPool
   id: DefaultMapPool
   maps:
+  - Arena
   - Asterisk
   - Core
   - Edge
