@@ -1,0 +1,51 @@
+- type: entity
+  parent: Clothing
+  id: ClothingClothWrap
+  name: cloth wraps
+  description: A roll of treated canvas used for wrapping claws or paws.
+  components:
+  - type: Item
+    size: Small
+    storedRotation: -90
+  - type: Sprite
+    state: icon
+    sprite: Clothing/Shoes/Misc/clothWrap.rsi
+  - type: Clothing
+    slots:
+    - gloves
+    - FEET
+    sprite: Clothing/Shoes/Misc/clothWrap.rsi
+  - type: MeleeWeapon # Spacious Station - add melee weapon damage
+    autoAttack: true
+    attackRate: 0.9
+    heavyStaminaCost: 0
+    heavyDamageBaseModifier: 1
+    maxTargets: 1
+    damage:
+      types:
+       Blunt: 6
+    soundHit:
+      collection: Punch
+    animation: WeaponArcFist
+    mustBeEquippedToUse: true
+  - type: Construction
+    graph: ClothingClothWrap
+    node: shoes
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: MaterialCloth1
+      amount: 1
+  - type: Food
+    requiresSpecialDigestion: true
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 10
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 10
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon

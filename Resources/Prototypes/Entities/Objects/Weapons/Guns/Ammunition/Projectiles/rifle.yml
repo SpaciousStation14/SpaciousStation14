@@ -7,7 +7,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 17
+        Piercing: 22 # Spacious Station - buff damage
 
 - type: entity
   id: BulletRiflePractice
@@ -41,17 +41,18 @@
     damage:
       types:
         Blunt: 2
-        Heat: 15
-  
+        Heat: 20 # Spacious Station - buff damage
+
 - type: entity
   id: BulletRifleUranium
   parent: BaseBulletUranium
   name: bullet (0.20 rifle uranium)
   categories: [ HideSpawnMenu ]
   components:
-  - type: Projectile
+  - type: Projectile # Spacious Station - buff damage and ignore resistances
     damage:
       types:
-        Radiation: 7
-        Piercing: 8
-        
+        Radiation: 9
+        Piercing: 10
+    ignoreResistances: true
+

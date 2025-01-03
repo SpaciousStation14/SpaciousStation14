@@ -3,6 +3,10 @@
   name: job-name-centcomoff
   description: job-description-centcomoff
   playTimeTracker: JobCentralCommandOfficial
+  requirements:
+    - !type:CharacterSpeciesRequirement # Spacious - Human-only command
+      species:
+        - Human
   setPreference: false
   startingGear: CentcomGear
   icon: "JobIconNanotrasen"

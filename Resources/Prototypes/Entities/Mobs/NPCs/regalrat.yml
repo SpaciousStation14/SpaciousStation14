@@ -2,7 +2,7 @@
   name: Rat King
   id: MobRatKing
   parent: [ SimpleMobBase, MobCombat ]
-  description: He's da rat. He make da roolz.
+  description: He's da rat king. He make da roolz. # Grimbly
   components:
   - type: CombatMode
   - type: MovementSpeedModifier
@@ -42,6 +42,17 @@
         - SmallMobMask
         layer:
         - SmallMobLayer
+  # Grimbly - ratking ID, headset, hands - Start
+  - type: Hands
+  - type: Inventory
+    speciesId: ratking
+    templateId: ratking
+  - type: InventorySlots
+  - type: Strippable
+  - type: Puller
+    needsHands: false
+  - type: IdExaminable
+  # Grimbly - End
   - type: MobState
   - type: MobThresholds
     thresholds:
@@ -132,6 +143,8 @@
     interfaces:
       enum.SurgeryUIKey.Key:
         type: SurgeryBui
+      enum.StrippingUiKey.Key: # Grimbly - add stripping ui
+        type: StrippableBoundUserInterface
 
 - type: entity
   id: MobRatKingBuff

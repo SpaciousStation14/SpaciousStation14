@@ -8,6 +8,6 @@
     damage:
       types:
         Piercing: 40
-        Structural: 30
+        Structural: 150  # Spacious Station - buff damage
   - type: StaminaDamageOnCollide
     damage: 35

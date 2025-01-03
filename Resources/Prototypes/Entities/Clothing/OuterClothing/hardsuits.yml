@@ -375,6 +375,8 @@
     lowPressureMultiplier: 1000
   - type: ExplosionResistance
     damageCoefficient: 0.2
+  - type: TemperatureProtection #Grimbly
+    Coefficient: 0.001
   - type: Armor
     modifiers:
       coefficients:

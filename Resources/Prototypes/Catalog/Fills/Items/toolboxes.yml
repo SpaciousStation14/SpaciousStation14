@@ -7,24 +7,31 @@
   - type: StorageFill
     contents:
       - id: CrowbarRed
+      # Grimbly items start
+      - id: RadioHandheld
+      - id: WelderMini
+      - id: FireExtinguisherMini
+      # Random lighting item orGroup
+      - id: FlashlightLantern
+        orGroup: LightingItem
+      - id: Flare
+        orGroup: LightingItem
+      - id: GlowstickBase
+        orGroup: LightingItem
+      # Grimbly items end
       - id: ClothingMaskBreath
       - id: ClothingMaskBreath
-        prob: 0.5
       - id: EmergencyOxygenTankFilled
       - id: EmergencyOxygenTankFilled
-        prob: 0.5
-      - id: FoodTinMRE
-      - id: FoodTinMRE
-        prob: 0.5
-      - id: DrinkWaterBottleFull
-      - id: DrinkWaterBottleFull
-        prob: 0.5
-      - id: FlashlightLantern
-      - id: FlashlightLantern
-        prob: 0.5
-      - id: HarmonicaInstrument
+      # Grimbly low-chance items start
+      - id: FoodSnackChocolate
         prob: 0.15
-
+      - id: HarmonicaInstrument
+        prob: 0.10
+      - id: FoodTinMRE
+        prob: 0.20
+      # Grimbly low-chance items end
+      
 - type: entity
   id: ToolboxElectricalFilled
   name: electrical toolbox

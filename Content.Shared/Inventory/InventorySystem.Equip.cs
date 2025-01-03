@@ -10,7 +10,9 @@ using Content.Shared.Inventory.Events;
 using Content.Shared.Item;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Popups;
+using Content.Shared.Strip;
 using Content.Shared.Strip.Components;
+using Content.Shared.Whitelist;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Timing;
@@ -30,6 +32,8 @@ public abstract partial class InventorySystem
     [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
+    [Dependency] private readonly SharedStrippableSystem _strippable = default!;
 
     [ValidatePrototypeId<ItemSizePrototype>]
     private const string PocketableItemSize = "Small";
@@ -169,8 +173,7 @@ public abstract partial class InventorySystem
             {
                 BlockDuplicate = true,
                 BreakOnHandChange = true,
-                BreakOnUserMove = true,
-                BreakOnTargetMove = true,
+                BreakOnMove = true,
                 CancelDuplicate = true,
                 RequireCanInteract = true,
                 NeedHand = true
@@ -225,11 +228,11 @@ public abstract partial class InventorySystem
 
     public bool CanEquip(EntityUid uid, EntityUid itemUid, string slot, [NotNullWhen(false)] out string? reason,
         SlotDefinition? slotDefinition = null, InventoryComponent? inventory = null,
-        ClothingComponent? clothing = null, ItemComponent? item = null, bool onSpawn = false) =>
-        CanEquip(uid, uid, itemUid, slot, out reason, slotDefinition, inventory, clothing, item, onSpawn);
+        ClothingComponent? clothing = null, ItemComponent? item = null, bool onSpawn = false, bool bypassAccessCheck = false) =>
+        CanEquip(uid, uid, itemUid, slot, out reason, slotDefinition, inventory, clothing, item, bypassAccessCheck);
 
     public bool CanEquip(EntityUid actor, EntityUid target, EntityUid itemUid, string slot, [NotNullWhen(false)] out string? reason, SlotDefinition? slotDefinition = null,
-        InventoryComponent? inventory = null, ClothingComponent? clothing = null, ItemComponent? item = null, bool onSpawn = false)
+        InventoryComponent? inventory = null, ClothingComponent? clothing = null, ItemComponent? item = null, bool onSpawn = false, bool bypassAccessCheck = false)
     {
         reason = "inventory-component-can-equip-cannot";
         if (!Resolve(target, ref inventory, false))
@@ -262,27 +265,21 @@ public abstract partial class InventorySystem
             return false;
         }
 
-        if (!onSpawn && !CanAccess(actor, target, itemUid)) // Don't check for reachability on spawn to equip loadout items in cryostorage
+        if (!bypassAccessCheck && !CanAccess(actor, target, itemUid))
         {
             reason = "interaction-system-user-interaction-cannot-reach";
             return false;
         }
 
-        if (slotDefinition.Whitelist != null && !slotDefinition.Whitelist.IsValid(itemUid))
+        if (_whitelistSystem.IsWhitelistFail(slotDefinition.Whitelist, itemUid) ||
+            _whitelistSystem.IsBlacklistPass(slotDefinition.Blacklist, itemUid))
         {
             reason = "inventory-component-can-equip-does-not-fit";
             return false;
         }
 
-        if (slotDefinition.Blacklist != null && slotDefinition.Blacklist.IsValid(itemUid))
-        {
-            reason = "inventory-component-can-equip-does-not-fit";
-            return false;
-        }
-
-        if (onSpawn &&
-            ((slotDefinition.SpawnWhitelist != null && !slotDefinition.SpawnWhitelist.IsValid(itemUid)) ||
-            (slotDefinition.SpawnBlacklist != null && slotDefinition.SpawnBlacklist.IsValid(itemUid))))
+        if (_whitelistSystem.IsWhitelistFail(slotDefinition.SpawnWhitelist, itemUid) ||
+            _whitelistSystem.IsBlacklistPass(slotDefinition.SpawnBlacklist, itemUid))
             return false;
 
         var attemptEvent = new IsEquippingAttemptEvent(actor, target, itemUid, slotDefinition);
@@ -423,8 +420,7 @@ public abstract partial class InventorySystem
             {
                 BlockDuplicate = true,
                 BreakOnHandChange = true,
-                BreakOnUserMove = true,
-                BreakOnTargetMove = true,
+                BreakOnMove = true,
                 CancelDuplicate = true,
                 RequireCanInteract = true,
                 NeedHand = true

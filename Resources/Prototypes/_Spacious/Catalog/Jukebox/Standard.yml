@@ -1,0 +1,97 @@
+# Sorted alphabetically
+
+- type: jukebox
+  id: Adrenaline
+  name: Nickzil - Adrenaline
+  path:
+    path: /Audio/_Spacious/Lobby/adrenaline.ogg
+
+- type: jukebox
+  id: Again
+  name: Nickzil - Again
+  path:
+    path: /Audio/_Spacious/Lobby/again.ogg
+
+- type: jukebox
+  id: AutumnChills
+  name: Nickzil - Autumn Chills
+  path:
+    path: /Audio/_Spacious/Lobby/autumn_chills.ogg
+
+- type: jukebox
+  id: BakerboySwagger
+  name: Nickzil - Bakerboy Swagger
+  path:
+    path: /Audio/_Spacious/Lobby/bakerboy_swagger.ogg
+
+- type: jukebox
+  id: BigRush
+  name: Nickzil - Big Rush
+  path:
+    path: /Audio/_Spacious/Lobby/big_rush.ogg
+
+- type: jukebox
+  id: Blast01
+  name: Nickzil - Blast01
+  path:
+    path: /Audio/_Spacious/Lobby/blast01.ogg
+
+- type: jukebox
+  id: Caravan
+  name: Nickzil - Caravan
+  path:
+    path: /Audio/_Spacious/Lobby/caravan.ogg
+
+- type: jukebox
+  id: Clever
+  name: Nickzil - Clever
+  path:
+    path: /Audio/_Spacious/Lobby/clever.ogg
+
+- type: jukebox
+  id: Egomania
+  name: Nickzil - EGOMANIA
+  path:
+    path: /Audio/_Spacious/Lobby/egomania.ogg
+
+- type: jukebox
+  id: FrozenLatte
+  name: Nickzil - Frozen Latte
+  path:
+    path: /Audio/_Spacious/Lobby/frozen_latte.ogg
+
+- type: jukebox
+  id: HorribleTrailerMusic
+  name: Nickzil - Horrible Trailer Music
+  path:
+    path: /Audio/_Spacious/Lobby/horrible_trailer_music.ogg
+
+- type: jukebox
+  id: Lovesick
+  name: Nickzil - Lovesick
+  path:
+    path: /Audio/_Spacious/Lobby/lovesick.ogg
+
+- type: jukebox
+  id: MakeTheJump
+  name: Nickzil - Make the Jump
+  path:
+    path: /Audio/_Spacious/Lobby/make_the_jump.ogg
+
+- type: jukebox
+  id: NeverendingSombre
+  name: Nickzil - Neverending Sombre
+  path:
+    path: /Audio/_Spacious/Lobby/neverending_sombre.ogg
+
+- type: jukebox
+  id: PillarsOfRedemption
+  name: Nickzil - Pillars of Redemption
+  path:
+    path: /Audio/_Spacious/Lobby/pillars_of_redemption.ogg
+
+- type: jukebox
+  id: Robotization
+  name: Nickzil - Robotization
+  path:
+    path: /Audio/_Spacious/Lobby/robotization.ogg
