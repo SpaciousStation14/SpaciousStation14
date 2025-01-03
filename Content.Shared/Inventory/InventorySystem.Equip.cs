@@ -229,7 +229,7 @@ public abstract partial class InventorySystem
     public bool CanEquip(EntityUid uid, EntityUid itemUid, string slot, [NotNullWhen(false)] out string? reason,
         SlotDefinition? slotDefinition = null, InventoryComponent? inventory = null,
         ClothingComponent? clothing = null, ItemComponent? item = null, bool onSpawn = false, bool bypassAccessCheck = false) =>
-        CanEquip(uid, uid, itemUid, slot, out reason, slotDefinition, inventory, clothing, item, bypassAccessCheck);
+        CanEquip(uid, uid, itemUid, slot, out reason, slotDefinition, inventory, clothing, item, onSpawn, bypassAccessCheck);
 
     public bool CanEquip(EntityUid actor, EntityUid target, EntityUid itemUid, string slot, [NotNullWhen(false)] out string? reason, SlotDefinition? slotDefinition = null,
         InventoryComponent? inventory = null, ClothingComponent? clothing = null, ItemComponent? item = null, bool onSpawn = false, bool bypassAccessCheck = false)
@@ -278,8 +278,9 @@ public abstract partial class InventorySystem
             return false;
         }
 
-        if (_whitelistSystem.IsWhitelistFail(slotDefinition.SpawnWhitelist, itemUid) ||
-            _whitelistSystem.IsBlacklistPass(slotDefinition.SpawnBlacklist, itemUid))
+        if (onSpawn &&
+            (_whitelistSystem.IsWhitelistFail(slotDefinition.SpawnWhitelist, itemUid) ||
+            _whitelistSystem.IsBlacklistPass(slotDefinition.SpawnBlacklist, itemUid)))
             return false;
 
         var attemptEvent = new IsEquippingAttemptEvent(actor, target, itemUid, slotDefinition);
