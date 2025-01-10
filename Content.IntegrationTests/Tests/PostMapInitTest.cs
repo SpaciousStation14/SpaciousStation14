@@ -52,6 +52,7 @@ namespace Content.IntegrationTests.Tests
             "NukieOutpost",
             "Core",
             "Pebble", //DeltaV
+            "Saltern", //Syndicate Station
             "Edge", //DeltaV
             "Saltern",
             "Shoukou", //DeltaV

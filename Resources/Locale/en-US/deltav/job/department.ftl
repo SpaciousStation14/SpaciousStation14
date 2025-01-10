@@ -1,4 +1,3 @@
-department-Epistemics = Epistemics
-department-Logistics = Logistics
 department-Justice = Justice
-
+department-Epistemics = Waffle Co.
+department-Logistics = Cybersun Industries

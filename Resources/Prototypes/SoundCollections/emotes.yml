@@ -96,3 +96,9 @@
   id: Wurble
   files:
     - /Audio/Voice/Shadowkin/wurble.ogg
+
+- type: SoundCollection
+  id: LaughEvil
+  files:
+    - /Audio/Effects/Emotes/cackle.ogg
+    - /Audio/Effects/Emotes/cackle2.ogg

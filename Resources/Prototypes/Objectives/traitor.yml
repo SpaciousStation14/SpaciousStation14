@@ -53,7 +53,7 @@
   categories: [HideSpawnMenu]
   parent: [BaseTraitorObjective, BaseLivingObjective]
   id: EscapeShuttleObjective
-  name: Escape to centcom alive and unrestrained.
+  name: Escape to highcom alive and unrestrained.
   description: One of our undercover agents will debrief you when you arrive. Don't show up in cuffs.
   components:
   - type: Objective
@@ -102,7 +102,7 @@
   categories: [HideSpawnMenu]
   parent: [BaseTraitorObjective, BaseKillObjective]
   id: KillRandomPersonObjective
-  description: Do it however you like, just make sure they don't make it to centcom.
+  description: Do it however you like, just make sure they don't make it to highcom.
   components:
   - type: Objective
     difficulty: 1.75

@@ -1,12 +1,13 @@
 - type: dataset
   id: TraitorCorporations
   values:
-  - "CyberSun Industries"
-  - "Gorlex Marauders"
-  - "MI13"
-  - "Tiger Cooperative"
-  - "S.E.L.F."
-  - "Animal Rights Consortium"
-  - "Donk Corporation"
-  - "Waffle Corporation"
-  - "Interdyne Pharmaceutics"
+  - "TerraGov Peace Corps" # they're not here to stop the conflicts out here in the spinward
+  - "Trasen-Knox Scientific Co." # NT's research division stealing secrets
+  - "NanoTrasen Asset Protection" # NT's security division clearing out the competition
+  - "GDI" # MI13 traitors? /tg/wiki mentions them on the MI13 page leaking info to NT.
+  - "TerraGov Marine Corps" # said to be the nukies for syndiestation soooo
+  - "Spinward Stellar Coalition" # commies at it again!
+  - "Internal Revenue Service" # Interdyne is NOT paying they taxes bro
+  - "Donk Corporation" # RTFW it literally says they've gotten into armed conflict with Waffle Corp, and this IS a research station.
+  - "CIA" # feds
+  - "KGB" # russian feds

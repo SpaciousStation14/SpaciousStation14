@@ -30,6 +30,15 @@
     - chortles
 
 - type: emote
+  id: LaughEvil
+  category: Vocal
+  chatMessages: [ cackles ]
+  chatTriggers:
+    - does an evil laugh
+    - cackles
+    - laughs evilly
+
+- type: emote
   id: Honk
   name: chat-emote-name-honk
   category: Vocal

@@ -34,6 +34,8 @@
       collection: Whistles
     Weh:
       collection: Weh
+    LaughEvil:
+      collection: LaughEvil
 
 - type: emoteSounds
   id: FemaleHuman
