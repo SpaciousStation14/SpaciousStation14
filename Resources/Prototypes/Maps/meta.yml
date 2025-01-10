@@ -1,8 +1,8 @@
 - type: gameMap
   id: Meta
   mapName: 'Meta Station'
-  mapPath: /Maps/Spacious/meta.yml
-  minPlayers: 0 #
+  mapPath: /Maps/meta.yml
+  minPlayers: 0  # Spacious
   maxPlayers: 85 #
   stations:
     Meta:
