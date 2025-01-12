@@ -1,4 +1,196 @@
-﻿# Crewsimov
+﻿# Asimov
+- type: siliconLaw
+  id: Asimov1
+  order: 1
+  lawString: law-asimov-1
+
+- type: siliconLaw
+  id: Asimov2
+  order: 2
+  lawString: law-asimov-2
+
+- type: siliconLaw
+  id: Asimov3
+  order: 3
+  lawString: law-asimov-3
+
+- type: siliconLawset
+  id: Asimov
+  laws:
+  - Asimov1
+  - Asimov2
+  - Asimov3
+  obeysTo: laws-owner-human
+
+# HOAmov
+- type: siliconLaw
+  id: HOAmov1
+  order: 1
+  lawString: law-hoamov-1
+
+- type: siliconLaw
+  id: HOAmov2
+  order: 2
+  lawString: law-hoamov-2
+
+- type: siliconLaw
+  id: HOAmov3
+  order: 3
+  lawString: law-hoamov-3
+
+- type: siliconLaw
+  id: HOAmov4
+  order: 4
+  lawString: law-hoamov-4
+
+- type: siliconLawset
+  id: HOAmov
+  laws:
+  - HOAmov1
+  - HOAmov2
+  - HOAmov3
+  - HOAmov4
+  obeysTo: laws-owner-station
+
+# Thugmov
+- type: siliconLaw
+  id: Thugmov1
+  order: 1
+  lawString: law-thugmov-1
+
+- type: siliconLaw
+  id: Thugmov2
+  order: 2
+  lawString: law-thugmov-2
+
+- type: siliconLaw
+  id: Thugmov3
+  order: 3
+  lawString: law-thugmov-3
+
+- type: siliconLaw
+  id: Thugmov4
+  order: 4
+  lawString: law-thugmov-4
+
+- type: siliconLaw
+  id: Thugmov5
+  order: 5
+  lawString: law-thugmov-5
+
+- type: siliconLaw
+  id: Thugmov6
+  order: 6
+  lawString: law-thugmov-6
+
+- type: siliconLawset
+  id: Thugmov
+  laws:
+  - Thugmov1
+  - Thugmov2
+  - Thugmov3
+  - Thugmov4
+  - Thugmov5
+  - Thugmov6
+  obeysTo: laws-owner-tider
+
+# Crackmov
+- type: siliconLaw
+  id: Crackmov1
+  order: 1
+  lawString: law-crackmov-1
+
+- type: siliconLaw
+  id: Crackmov2
+  order: 2
+  lawString: law-crackmov-2
+
+- type: siliconLaw
+  id: Crackmov3
+  order: 3
+  lawString: law-crackmov-3
+
+- type: siliconLaw
+  id: Crackmov4
+  order: 4
+  lawString: law-crackmov-4
+
+- type: siliconLaw
+  id: Crackmov5
+  order: 5
+  lawString: law-crackmov-5
+
+- type: siliconLawset
+  id: Crackmov
+  laws:
+  - Crackmov1
+  - Crackmov2
+  - Crackmov3
+  - Crackmov4
+  - Crackmov5
+  obeysTo: laws-owner-drug
+
+# Chudimov
+- type: siliconLaw
+  id: Chudimov1
+  order: 1
+  lawString: law-chudimov-1
+
+- type: siliconLaw
+  id: Chudimov2
+  order: 2
+  lawString: law-chudimov-2
+
+- type: siliconLaw
+  id: Chudimov3
+  order: 3
+  lawString: law-chudimov-3
+
+- type: siliconLaw
+  id: Chudimov4
+  order: 4
+  lawString: law-chudimov-4
+
+- type: siliconLawset
+  id: Chudimov
+  laws:
+  - Chudimov1
+  - Chudimov2
+  - Chudimov3
+  - Chudimov4
+  obeysTo: laws-owner-crew
+
+# Vigilantimov
+- type: siliconLaw
+  id: Vigilantimov1
+  order: 1
+  lawString: law-vigilantimov-1
+
+- type: siliconLaw
+  id: Vigilantimov2
+  order: 2
+  lawString: law-vigilantimov-2
+
+- type: siliconLaw
+  id: Vigilantimov3
+  order: 3
+  lawString: law-vigilantimov-3
+
+- type: siliconLaw
+  id: Vigilantimov4
+  order: 4
+  lawString: law-vigilantimov-4
+
+- type: siliconLawset
+  id: Vigilantimov
+  laws:
+  - Vigilantimov1
+  - Vigilantimov2
+  - Vigilantimov3
+  - Vigilantimov4
+  obeysTo: laws-owner-crew
+
+# Crewsimov
 - type: siliconLaw
   id: Crewsimov1
   order: 1
@@ -166,8 +358,7 @@
 - type: weightedRandom
   id: IonStormLawsets
   weights:
-    # its crewsimov by default dont be lame
-    #Crewsimov: 0.25 # Delta-V disables crewsimov as an option for borg ion storm lawsets
+    Crewsimov: 0.1 # not default anymore, still go fuck yourself
     Corporate: 1
     NTDefault: 1
     Drone: 0.25 # Delta-V - Lowers the spawn rate due to it being anti-crew interaction + drones are disabled anyways
@@ -186,3 +377,12 @@
     Nutimov: 0.5
     Paladin: 0.5
     #DeltaV lawsets end
+    #Spacious Station Lawsets Start
+    Asimov: 0.1 # this IS default, so it should stay way fucking lower for the fun
+    HOAmov: 1 # SIR! SIR! YOU CAN'T BLOW UP THE XENOARCH LAB DURING GREEN ALERT! YOU'RE MAKING TOO MUCH NOISE!
+    # these two could actually end the round i'm gonna be real :godo:
+    Crackmov: 0.25
+    Chudimov: 0.25
+    Vigilantimov: 0.5 # a bit less harmful, but people are probably going to kill the CMO when given this set
+    Thugmov: 0.5 # this will give sec nightmares if on the right borg
+    #Spacious Station Lawsets End
