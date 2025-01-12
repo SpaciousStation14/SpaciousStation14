@@ -1,6 +1,6 @@
 #Basic armor vest replacement
 - type: entity
-  parent: ClothingOuterBaseMedium
+  parent: [ClothingOuterBaseMedium, AllowSuitStorageClothing] #why the FUCK wasn't this done before
   id: ClothingOuterArmorPlateCarrier
   name: plate carrier
   description: A large and bulky carrier featuring steel plates that offer decent protection against gunfire.
@@ -12,19 +12,19 @@
   - type: Armor # Good against gunshots, decent against everything else. Balanced by reduced movement speed.
     modifiers:
       coefficients:
-        Blunt: 0.80
-        Slash: 0.80
-        Piercing: 0.50
+        Blunt: 0.75
+        Slash: 0.75
+        Piercing: 0.30 # these plates might actually be lv 4 plates :godo:
         Heat: 0.80
   - type: ClothingSpeedModifier
-    walkModifier: 0.90
-    sprintModifier: 0.90
-  - type: ExplosionResistance # More protective against explosives than you think. Helps in preventing all those vital organs from jiggling around o.o
-    damageCoefficient: 0.70
+    walkModifier: 0.95 # not hard to walk though, just a bit slower than usual
+    sprintModifier: 0.9 # go run with lv 4 plates strapped to your chest and see how fast you can go
+  - type: ExplosionResistance
+    damageCoefficient: 0.5 # i'll lower this if it stops syndicate bombs from delimbing you
 
 #Alternate / slim basic armor vest replacement
 - type: entity
-  parent: ClothingOuterBaseMedium
+  parent: [ClothingOuterBaseMedium, AllowSuitStorageClothing]
   id: ClothingOuterArmorDuraVest
   name: durathread vest
   description: A tight-fitting and sturdy armor vest, reinforced with durathread weave to protect against sharp objects and blunt force trauma.
@@ -36,15 +36,15 @@
   - type: Armor # Good against stabs and knocks, offers minimal protection from gunshots and lasfire.
     modifiers:
       coefficients:
-        Blunt: 0.60
-        Slash: 0.60
-        Piercing: 0.90
+        Blunt: 0.50
+        Slash: 0.50
+        Piercing: 0.65 #whodathunk it that kevlar can stop bullets
         Heat: 0.90
   - type: ExplosionResistance # Better than nothing against a blast or shockwave.
-    damageCoefficient: 0.90
+    damageCoefficient: 0.75
 
 - type: entity
-  parent: ClothingOuterBaseLarge
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
   id: ClothingOuterArmorARC
   name: ARCS
   description: The Advanced Riot Control Suit, or ARCS for short, is generally regarded as far too bulky and overly hot for any practical use - but when the riots are raging, most officers invariably take great comfort from the thick and claustrophobic padding.
@@ -56,13 +56,13 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.40
-        Slash: 0.40
-        Piercing: 0.70
-        Heat: 0.70
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.65
+        Heat: 0.70 # leaving unchanged since the description mentions it's not good at dissipating heat - Ducks
   - type: ClothingSpeedModifier
-    walkModifier: 0.75
-    sprintModifier: 0.75
+    walkModifier: 0.8
+    sprintModifier: 0.8
   - type: ExplosionResistance # Almost as good as a plate carrier! Still not going to save you from most bombs though.
-    damageCoefficient: 0.80
+    damageCoefficient: 0.65
   - type: GroupExamine
