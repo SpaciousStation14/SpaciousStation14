@@ -9674,3 +9674,51 @@ Entries:
   id: 6673
   time: '2025-01-11T22:32:29.0000000+00:00'
   url: https://github.com/Simple-Station/Einstein-Engines/pull/1464
+- author: Aviu00
+  changes:
+    - type: Fix
+      message: Fix silo being out of range.
+  id: 6674
+  time: '2025-01-12T02:22:30.0000000+00:00'
+  url: https://github.com/Simple-Station/Einstein-Engines/pull/1502
+- author: sleepyyapril
+  changes:
+    - type: Add
+      message: Added Nanotrasen Representative and Blueshield Officer
+    - type: Add
+      message: >-
+        Added Admin Assistant, Nanorep, and Blueshield Officer spawns to all
+        maps. BSO and Nanorep don't get an office, they get a unique teleporter.
+        (as of now) Ask your resident mapper to fix this.
+    - type: Add
+      message: >-
+        Added the loadout options for Nanotrasen Representative and Blueshield
+        Officer.
+  id: 6675
+  time: '2025-01-12T06:55:41.0000000+00:00'
+  url: https://github.com/Simple-Station/Einstein-Engines/pull/1495
+- author: VMSolidus
+  changes:
+    - type: Tweak
+      message: Disabled Shadowkin as a default roundstart-available species.
+  id: 6676
+  time: '2025-01-12T20:28:22.0000000+00:00'
+  url: https://github.com/Simple-Station/Einstein-Engines/pull/1516
+- author: VMSolidus
+  changes:
+    - type: Fix
+      message: Fixed Energy Swords not displaying their blade when ignited.
+  id: 6677
+  time: '2025-01-12T21:20:27.0000000+00:00'
+  url: https://github.com/Simple-Station/Einstein-Engines/pull/1519
+- author: sleepyyapril
+  changes:
+    - type: Fix
+      message: >-
+        Fixed Nanotrasen Representative lacking in the starter clothes
+        department
+    - type: Fix
+      message: Fixed Nanotrasen Representative lacking in the headset department
+  id: 6678
+  time: '2025-01-12T21:21:34.0000000+00:00'
+  url: https://github.com/Simple-Station/Einstein-Engines/pull/1512
