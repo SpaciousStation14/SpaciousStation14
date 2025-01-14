@@ -26,10 +26,12 @@
   - type: Armor #same as regular sec armor
     modifiers:
       coefficients:
-        Blunt: 0.70
-        Slash: 0.70
-        Piercing: 0.70
-        Heat: 0.80
+        Blunt: 0.65
+        Slash: 0.65
+        Piercing: 0.60
+        Heat: 0.70
+  - type: ExplosionResistance
+    damageCoefficient: 0.75
 
 - type: entity
   parent: ClothingOuterCoatDetective
@@ -76,7 +78,7 @@
         Heat: 0.7
         Caustic: 0.75 # not the full 90% from ss13 because of the head
   - type: ExplosionResistance
-    damageCoefficient: 0.9
+    damageCoefficient: 0.75
 
 - type: entity
   abstract: true
@@ -91,7 +93,7 @@
         Piercing: 0.7
         Heat: 0.7
   - type: ExplosionResistance
-    damageCoefficient: 0.9
+    damageCoefficient: 0.75
 
 - type: entity
   parent: [ClothingOuterArmorHoS, ClothingOuterStorageBase]

@@ -19,7 +19,7 @@
   parent: ClothingOuterBase
   id: ClothingOuterArmorKendoBogu
   name: bogu
-  description: A set of armor used in Kendo. It covers the waist, torso, and hands. 
+  description: A set of armor used in Kendo. It covers the waist, torso, and hands.
   components:
   - type: Sprite
     sprite: Nyanotrasen/Clothing/OuterClothing/Armor/bogu.rsi
@@ -33,12 +33,12 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.95
     sprintModifier: 0.85
-    
+
 - type: entity
   parent: ClothingOuterBase
   id: ClothingOuterArmorTouseiGusoku
   name: tousei-gusoku
-  description: A modern replica of a Ni-mai-do Gusoku armor set. 
+  description: A modern replica of a Ni-mai-do Gusoku armor set.
   components:
   - type: Sprite
     sprite: Nyanotrasen/Clothing/OuterClothing/Armor/touseigusoku.rsi
@@ -47,7 +47,13 @@
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.80
-        Slash: 0.60
-        Piercing: 0.85
-        
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.35
+        Heat: 0.85
+        Caustic: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.35
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
