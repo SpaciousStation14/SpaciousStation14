@@ -5,14 +5,14 @@
   minPlayers: 0
   maxPlayers: 60
   stations:
-    Shoukou:
+    OBlock:
       stationProto: StandardNanotrasenStation
       components:
         - type: StationNameSetup
-          mapNameTemplate: '{0} Shōkō "Little Port" {1}'
+          mapNameTemplate: '{0} Chicago, Illinois "O'Block" {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
-            prefixCreator: 'DV'
+            prefixCreator: 'Eagle presents'
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/DeltaV/NTES_Delta.yml
         - type: StationJobs

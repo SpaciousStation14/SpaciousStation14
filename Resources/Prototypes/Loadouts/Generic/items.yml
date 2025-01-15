@@ -1,3 +1,29 @@
+- type: loadout
+  id: LoadoutItemPistolPollockOBlock
+  category: Items
+  cost: 0
+  canBeHeirloom: true
+#  requirements:
+#    - !type:CharacterDepartmentTimeRequirement
+#      department: Security
+#      min: 3600 # 1 hours
+  items:
+    - WeaponPistolPollockOBlock
+
+- type: loadout
+  id: LoadoutMagazinePistolOBlock
+  category: Items
+  cost: 0
+  items:
+    - MagazinePistol
+
+- type: loadout
+  id: LoadoutMagazinePistolSpareOBlockSpare
+  category: Items
+  cost: 2
+  items:
+    - MagazinePistol
+
 #Smokes
 - type: loadout
   id: LoadoutItemCig

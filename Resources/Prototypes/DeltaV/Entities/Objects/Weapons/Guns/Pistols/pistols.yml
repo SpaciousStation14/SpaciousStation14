@@ -120,6 +120,13 @@
     guides: [ SecurityWeapons ]
 
 - type: entity
+  name: Pollock "da blicky"
+  parent: WeaponPistolPollock
+  id: WeaponPistolPollockOBlock
+  description: A compact and mass-produced combat pistol. Uses .35 auto ammo.
+               The serial number on the handguard marks this gun as belonging to an OP.
+
+- type: entity
   name: psi-breaker
   parent: BaseWeaponPistol
   id: WeaponPistolPsiBreaker
