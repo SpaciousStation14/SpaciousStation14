@@ -1,3 +1,15 @@
+#weapons
+- type: loadout
+  id: LoadoutItemPistolPollockCivilian
+  category: Items
+  cost: 0
+  canBeHeirloom: true
+#  requirements:
+#    - !type:CharacterDepartmentTimeRequirement
+#      department: Security
+#      min: 3600 # 1 hours
+  items:
+    - WeaponPistolPollockCivilian
 #Smokes
 - type: loadout
   id: LoadoutItemCig
