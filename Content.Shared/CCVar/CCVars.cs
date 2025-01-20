@@ -2723,7 +2723,7 @@ namespace Content.Shared.CCVar
         ///    Whether glimmer is enabled.
         /// </summary>
         public static readonly CVarDef<bool> GlimmerEnabled =
-            CVarDef.Create("glimmer.enabled", false, CVar.REPLICATED);
+            CVarDef.Create("glimmer.enabled", true, CVar.REPLICATED);
 
         /// <summary>
         ///     Passive glimmer drain per second.
@@ -2737,7 +2737,7 @@ namespace Content.Shared.CCVar
         ///     Guaranteed psionics will still go through.
         /// </summary>
         public static readonly CVarDef<bool> PsionicRollsEnabled =
-            CVarDef.Create("psionics.rolls_enabled", false, CVar.SERVERONLY);
+            CVarDef.Create("psionics.rolls_enabled", true, CVar.SERVERONLY);
 
         /// <summary>
         ///     Whether height & width sliders adjust a character's Fixture Component
