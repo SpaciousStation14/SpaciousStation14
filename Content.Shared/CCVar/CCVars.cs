@@ -276,7 +276,7 @@ namespace Content.Shared.CCVar
         /// Whether or not disconnecting inside of a cryopod should remove the character or just store them until they reconnect.
         /// </summary>
         public static readonly CVarDef<bool>
-            GameCryoSleepRejoining = CVarDef.Create("game.cryo_sleep_rejoining", false, CVar.SERVER | CVar.REPLICATED);
+            GameCryoSleepRejoining = CVarDef.Create("game.cryo_sleep_rejoining", true, CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
         ///     When enabled, guests will be assigned permanent UIDs and will have their preferences stored.
@@ -457,7 +457,7 @@ namespace Content.Shared.CCVar
         ///     How many points to give to each player for loadouts.
         /// </summary>
         public static readonly CVarDef<int> GameLoadoutsPoints =
-            CVarDef.Create("game.loadouts_points", 14, CVar.REPLICATED);
+            CVarDef.Create("game.loadouts_points", 20, CVar.REPLICATED);
 
 
         /// <summary>
@@ -470,13 +470,13 @@ namespace Content.Shared.CCVar
         ///     Whether to repeat drinking doafters after completion
         /// </summary>
         public static readonly CVarDef<bool> GameAutoEatDrinks =
-            CVarDef.Create("game.auto_eat_drinks", false, CVar.REPLICATED);
+            CVarDef.Create("game.auto_eat_drinks", true, CVar.REPLICATED);
 
         /// <summary>
         ///     Whether item slots, such as power cell slots or AME fuel cell slots, should support quick swap if it is not otherwise specified in their YAML prototype.
         /// </summary>
         public static readonly CVarDef<bool> AllowSlotQuickSwap =
-            CVarDef.Create("game.slot_quick_swap", false, CVar.REPLICATED);
+            CVarDef.Create("game.slot_quick_swap", true, CVar.REPLICATED);
 
 #if EXCEPTION_TOLERANCE
         /// <summary>
@@ -498,7 +498,7 @@ namespace Content.Shared.CCVar
         /// Defaults to 2 minutes.
         /// </summary>
         public static readonly CVarDef<float> RoundRestartTime =
-            CVarDef.Create("game.round_restart_time", 120f, CVar.SERVERONLY);
+            CVarDef.Create("game.round_restart_time", 60f, CVar.SERVERONLY);
 
         /// <summary>
         /// The prototype to use for secret weights.
@@ -1621,7 +1621,7 @@ namespace Content.Shared.CCVar
         /// True: Crit players can use LOOC
         /// False: Crit player LOOC gets redirected to dead chat
         /// </summary>
-        public static readonly CVarDef<bool> CritLoocEnabled = CVarDef.Create("looc.enabled_crit", false, CVar.NOTIFY | CVar.REPLICATED);
+        public static readonly CVarDef<bool> CritLoocEnabled = CVarDef.Create("looc.enabled_crit", true, CVar.NOTIFY | CVar.REPLICATED);
 
         #endregion
         #region Entity Menu Grouping Types
@@ -1794,7 +1794,7 @@ namespace Content.Shared.CCVar
         /// Cooldown between arrivals departures. This should be longer than the FTL time or it will double cycle.
         /// </summary>
         public static readonly CVarDef<float> ArrivalsCooldown =
-            CVarDef.Create("shuttle.arrivals_cooldown", 50f, CVar.SERVERONLY);
+            CVarDef.Create("shuttle.arrivals_cooldown", 30f, CVar.SERVERONLY);
 
         /// <summary>
         /// Time it takes the shuttle to spin up it's hyper drive and jump
@@ -1806,7 +1806,7 @@ namespace Content.Shared.CCVar
         /// Time spent in hyperspace
         /// </summary>
         public static readonly CVarDef<float> ArrivalsHyperspaceTime =
-            CVarDef.Create("shuttle.arrivals_hyperspace_time", 20f, CVar.SERVERONLY);
+            CVarDef.Create("shuttle.arrivals_hyperspace_time", 15f, CVar.SERVERONLY);
 
         /// <summary>
         /// Are players allowed to return on the arrivals shuttle.
@@ -1818,7 +1818,7 @@ namespace Content.Shared.CCVar
         /// Should all players who spawn at arrivals have godmode until they leave the map?
         /// </summary>
         public static readonly CVarDef<bool> GodmodeArrivals =
-            CVarDef.Create("shuttle.godmode_arrivals", false, CVar.SERVERONLY);
+            CVarDef.Create("shuttle.godmode_arrivals", true, CVar.SERVERONLY);
 
         /// <summary>
         /// If a grid is split then hide any smaller ones under this mass (kg) from the map.
@@ -1903,7 +1903,7 @@ namespace Content.Shared.CCVar
         /// How long the emergency shuttle remains docked with the station, in seconds.
         /// </summary>
         public static readonly CVarDef<float> EmergencyShuttleDockTime =
-            CVarDef.Create("shuttle.emergency_dock_time", 240f, CVar.SERVERONLY);
+            CVarDef.Create("shuttle.emergency_dock_time", 300f, CVar.SERVERONLY);
 
         /// <summary>
         /// How long after the console is authorized for the shuttle to early launch.
@@ -1922,7 +1922,7 @@ namespace Content.Shared.CCVar
         /// The maximum time for the emergency shuttle to arrive at centcomm.
         /// </summary>
         public static readonly CVarDef<float> EmergencyShuttleMaxTransitTime =
-            CVarDef.Create("shuttle.emergency_transit_time_max", 180f, CVar.SERVERONLY);
+            CVarDef.Create("shuttle.emergency_transit_time_max", 60f, CVar.SERVERONLY);
 
         /// <summary>
         /// Whether the emergency shuttle is enabled or should the round just end.
@@ -1941,14 +1941,14 @@ namespace Content.Shared.CCVar
         ///     Time in minutes after round start to auto-call the shuttle. Set to zero to disable.
         /// </summary>
         public static readonly CVarDef<int> EmergencyShuttleAutoCallTime =
-            CVarDef.Create("shuttle.auto_call_time", 120, CVar.SERVERONLY);
+            CVarDef.Create("shuttle.auto_call_time", 180, CVar.SERVERONLY);
 
         /// <summary>
         ///     Time in minutes after the round was extended (by recalling the shuttle) to call
         ///     the shuttle again.
         /// </summary>
         public static readonly CVarDef<int> EmergencyShuttleAutoCallExtensionTime =
-            CVarDef.Create("shuttle.auto_call_extension_time", 30, CVar.SERVERONLY);
+            CVarDef.Create("shuttle.auto_call_extension_time", 60, CVar.SERVERONLY);
 
         #endregion
         #region Crew Manifests
@@ -1990,7 +1990,7 @@ namespace Content.Shared.CCVar
         ///     Whether or not the Biomass Reclaimer is allowed to roundremove bodies with a soul.
         /// </summary>
         public static readonly CVarDef<bool> CloningReclaimSouledBodies =
-            CVarDef.Create("cloning.reclaim_souled_bodies", true, CVar.SERVERONLY);
+            CVarDef.Create("cloning.reclaim_souled_bodies", false, CVar.SERVERONLY);
 
         /// <summary>
         ///     Controls whether or not Metempsychosis will potentially give people a sex change.
@@ -2008,19 +2008,19 @@ namespace Content.Shared.CCVar
         ///     Controls whether or not Metempsychosis preserves Age.
         /// </summary>
         public static readonly CVarDef<bool> CloningPreserveAge =
-            CVarDef.Create("cloning.preserve_age", false, CVar.SERVERONLY);
+            CVarDef.Create("cloning.preserve_age", true, CVar.SERVERONLY);
 
         /// <summary>
         ///     Controls whether or not Metempsychosis preserves height.
         /// </summary>
         public static readonly CVarDef<bool> CloningPreserveHeight =
-            CVarDef.Create("cloning.preserve_height", false, CVar.SERVERONLY);
+            CVarDef.Create("cloning.preserve_height", true, CVar.SERVERONLY);
 
         /// <summary>
         ///     Controls whether or not Metempsychosis preserves width.
         /// </summary>
         public static readonly CVarDef<bool> CloningPreserveWidth =
-            CVarDef.Create("cloning.preserve_width", false, CVar.SERVERONLY);
+            CVarDef.Create("cloning.preserve_width", true, CVar.SERVERONLY);
 
         /// <summary>
         ///     Controls whether or not Metempsychosis preserves Names. EG: Are you actually a new person?
@@ -2243,7 +2243,7 @@ namespace Content.Shared.CCVar
         /// Restricts IC character names to alphanumeric chars.
         /// </summary>
         public static readonly CVarDef<bool> RestrictedNames =
-            CVarDef.Create("ic.restricted_names", true, CVar.SERVER | CVar.REPLICATED);
+            CVarDef.Create("ic.restricted_names", false, CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
         /// Allows flavor text (character descriptions)
@@ -2303,7 +2303,7 @@ namespace Content.Shared.CCVar
         /// Cooldown for missions.
         /// </summary>
         public static readonly CVarDef<float>
-            SalvageExpeditionCooldown = CVarDef.Create("salvage.expedition_cooldown", 780f, CVar.REPLICATED);
+            SalvageExpeditionCooldown = CVarDef.Create("salvage.expedition_cooldown", 30f, CVar.REPLICATED);
 
         #endregion
         #region Flavor
@@ -2353,7 +2353,7 @@ namespace Content.Shared.CCVar
         ///     Time that players have to wait before rules can be accepted.
         /// </summary>
         public static readonly CVarDef<float> RulesWaitTime =
-            CVarDef.Create("rules.time", 10f, CVar.SERVER | CVar.REPLICATED);
+            CVarDef.Create("rules.time", 1f, CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
         ///     Don't show rules to localhost/loopback interface.
@@ -2484,7 +2484,7 @@ namespace Content.Shared.CCVar
         /// The time you must spend reading the rules, before the "Request" button is enabled
         /// </summary>
         public static readonly CVarDef<float> GhostRoleTime =
-            CVarDef.Create("ghost.role_time", 8f, CVar.REPLICATED | CVar.SERVER);
+            CVarDef.Create("ghost.role_time", 1f, CVar.REPLICATED | CVar.SERVER);
 
         #endregion
         #region Fire alarm
@@ -2534,7 +2534,7 @@ namespace Content.Shared.CCVar
         /// Link to GitHub page to show in the launcher.
         /// </summary>
         public static readonly CVarDef<string> InfoLinksGithub =
-            CVarDef.Create("infolinks.github", "", CVar.SERVER | CVar.REPLICATED);
+            CVarDef.Create("https://github.com/SpaciousStation14/SpaciousStation14", "", CVar.SERVER | CVar.REPLICATED);
 
         /// <summary>
         /// Link to website to show in the launcher.
@@ -2723,21 +2723,21 @@ namespace Content.Shared.CCVar
         ///    Whether glimmer is enabled.
         /// </summary>
         public static readonly CVarDef<bool> GlimmerEnabled =
-            CVarDef.Create("glimmer.enabled", true, CVar.REPLICATED);
+            CVarDef.Create("glimmer.enabled", false, CVar.REPLICATED);
 
         /// <summary>
         ///     Passive glimmer drain per second.
         ///     Note that this is randomized and this is an average value.
         /// </summary>
         public static readonly CVarDef<float> GlimmerLostPerSecond =
-            CVarDef.Create("glimmer.passive_drain_per_second", 0.1f, CVar.SERVERONLY);
+            CVarDef.Create("glimmer.passive_drain_per_second", 1f, CVar.SERVERONLY);
 
         /// <summary>
         ///     Whether random rolls for psionics are allowed.
         ///     Guaranteed psionics will still go through.
         /// </summary>
         public static readonly CVarDef<bool> PsionicRollsEnabled =
-            CVarDef.Create("psionics.rolls_enabled", true, CVar.SERVERONLY);
+            CVarDef.Create("psionics.rolls_enabled", false, CVar.SERVERONLY);
 
         /// <summary>
         ///     Whether height & width sliders adjust a character's Fixture Component
@@ -2770,7 +2770,7 @@ namespace Content.Shared.CCVar
         ///     Chance for a station goal to be sent
         /// </summary>
         public static readonly CVarDef<float> StationGoalsChance =
-            CVarDef.Create("game.station_goals_chance", 0.1f, CVar.SERVERONLY);
+            CVarDef.Create("game.station_goals_chance", 1f, CVar.SERVERONLY);
 
         #endregion
         #region CPR System
@@ -2802,7 +2802,7 @@ namespace Content.Shared.CCVar
         ///     Setting this above 0 isn't very realistic, but people who see CPR in movies and TV will expect CPR to work this way.
         /// </summary>
         public static readonly CVarDef<float> CPRResuscitationChance =
-            CVarDef.Create("cpr.resuscitation_chance", 0.05f, CVar.REPLICATED | CVar.SERVER);
+            CVarDef.Create("cpr.resuscitation_chance", 0.10f, CVar.REPLICATED | CVar.SERVER);
 
         /// <summary>
         ///     By default, CPR reduces rot timers by an amount of seconds equal to the time spent performing CPR. This is an optional multiplier that can increase or decrease the amount
@@ -3015,13 +3015,13 @@ namespace Content.Shared.CCVar
          */
 
         public static readonly CVarDef<double> GhostRespawnTime =
-            CVarDef.Create("ghost.respawn_time", 15d, CVar.SERVERONLY);
+            CVarDef.Create("ghost.respawn_time", 5d, CVar.SERVERONLY);
 
         public static readonly CVarDef<int> GhostRespawnMaxPlayers =
-            CVarDef.Create("ghost.respawn_max_players", 40, CVar.SERVERONLY);
+            CVarDef.Create("ghost.respawn_max_players", 100, CVar.SERVERONLY);
 
         public static readonly CVarDef<bool> GhostAllowSameCharacter =
-            CVarDef.Create("ghost.allow_same_character", false, CVar.SERVERONLY);
+            CVarDef.Create("ghost.allow_same_character", true, CVar.SERVERONLY);
 
         #endregion
         #region Surgery
@@ -3030,7 +3030,7 @@ namespace Content.Shared.CCVar
          */
 
         public static readonly CVarDef<bool> CanOperateOnSelf =
-            CVarDef.Create("surgery.can_operate_on_self", false, CVar.SERVERONLY);
+            CVarDef.Create("surgery.can_operate_on_self", true, CVar.SERVERONLY);
 
         #endregion
         #region AUTOVOTE SYSTEM
