@@ -13021,18 +13021,6 @@ entities:
     - type: Transform
       pos: -29.756311,11.875735
       parent: 100
-- proto: BannerNanotrasen
-  entities:
-  - uid: 4628
-    components:
-    - type: Transform
-      pos: -13.5,75.5
-      parent: 100
-  - uid: 12501
-    components:
-    - type: Transform
-      pos: -7.5,75.5
-      parent: 100
 - proto: Barricade
   entities:
   - uid: 2035
@@ -13119,7 +13107,7 @@ entities:
   - uid: 9079
     components:
     - type: MetaData
-      desc: A rather robust bar promoted across Nanotrasen; As long as the beer flows here, Lighthouse will shine like a star.
+      desc: A rather robust bar promoted across Syndicate; As long as the beer flows here, Lighthouse will shine like a star.
     - type: Transform
       pos: 3.5,12.5
       parent: 100
@@ -92526,18 +92514,6 @@ entities:
     components:
     - type: Transform
       pos: 11.5,-70.5
-      parent: 100
-- proto: PosterLegitNanotrasenLogo
-  entities:
-  - uid: 12334
-    components:
-    - type: Transform
-      pos: -17.5,55.5
-      parent: 100
-  - uid: 12335
-    components:
-    - type: Transform
-      pos: -13.5,55.5
       parent: 100
 - proto: PosterLegitNoERP
   entities:

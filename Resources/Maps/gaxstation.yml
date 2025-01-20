@@ -14828,18 +14828,6 @@ entities:
     - type: Transform
       pos: -29.479267,76.4286
       parent: 2
-- proto: BannerNanotrasen
-  entities:
-  - uid: 18019
-    components:
-    - type: Transform
-      pos: 79.5,35.5
-      parent: 2
-  - uid: 18128
-    components:
-    - type: Transform
-      pos: 79.5,33.5
-      parent: 2
 - proto: BarricadeBlock
   entities:
   - uid: 716
@@ -50089,17 +50077,6 @@ entities:
 - proto: ClothingHeadHatFlatcapBartenderIdris
   entities:
   - uid: 20346
-    components:
-    - type: Transform
-      parent: 20345
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: ClothingHeadHatFlatcapBartenderNanotrasen
-  entities:
-  - uid: 20360
     components:
     - type: Transform
       parent: 20345
@@ -97476,33 +97453,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -35.5,71.5
-      parent: 2
-- proto: PosterLegitNanotrasenLogo
-  entities:
-  - uid: 17018
-    components:
-    - type: Transform
-      pos: 84.5,34.5
-      parent: 2
-  - uid: 17019
-    components:
-    - type: Transform
-      pos: 83.5,39.5
-      parent: 2
-  - uid: 17020
-    components:
-    - type: Transform
-      pos: 83.5,29.5
-      parent: 2
-  - uid: 17915
-    components:
-    - type: Transform
-      pos: 76.5,36.5
-      parent: 2
-  - uid: 17932
-    components:
-    - type: Transform
-      pos: 76.5,32.5
       parent: 2
 - proto: PottedPlantRandom
   entities:

@@ -15005,18 +15005,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: BannerNanotrasen
-  entities:
-  - uid: 17361
-    components:
-    - type: Transform
-      pos: -57.5,15.5
-      parent: 2
-  - uid: 17362
-    components:
-    - type: Transform
-      pos: -57.5,11.5
-      parent: 2
 - proto: Barricade
   entities:
   - uid: 595
@@ -45415,7 +45403,7 @@ entities:
   - uid: 6119
     components:
     - type: MetaData
-      desc: glory to Nanotrasen.
+      desc: glory to the syndicate.
       name: check point officer cap
     - type: Transform
       pos: 43.354614,31.779919
@@ -84435,7 +84423,7 @@ entities:
         SHIP LOG XX:30>?
 
                    I've lost track of time on this ice hell-hole.. Storm broke up
-        my ship and I crashed onto this station, but it belongs to Nanotrasen. I was able to make a small home in maints, and right under Sec's nose too, haha. Should be a good hide-out from GALPOL.. I was able to recover the shuttle console circuit board, but I have no idea where the other parts are..
+        my ship and I crashed onto this station, but it belongs to the Syndicate. I was able to make a small home in maints, and right under Sec's nose too, haha. Should be a good hide-out from GALPOL.. I was able to recover the shuttle console circuit board, but I have no idea where the other parts are..
 
         END LOG
   - uid: 12135
@@ -85706,28 +85694,6 @@ entities:
     components:
     - type: Transform
       pos: 56.5,42.5
-      parent: 2
-- proto: PosterLegitNanotrasenLogo
-  entities:
-  - uid: 12310
-    components:
-    - type: Transform
-      pos: 34.5,43.5
-      parent: 2
-  - uid: 12311
-    components:
-    - type: Transform
-      pos: 33.5,43.5
-      parent: 2
-  - uid: 12522
-    components:
-    - type: Transform
-      pos: -63.5,25.5
-      parent: 2
-  - uid: 12523
-    components:
-    - type: Transform
-      pos: -66.5,25.5
       parent: 2
 - proto: PosterLegitNoERP
   entities:

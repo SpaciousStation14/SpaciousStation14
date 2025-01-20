@@ -19652,7 +19652,7 @@ entities:
       parent: 1052
     - type: Paper
       content: >2-
-         Antes de tudo, quero esclarecer algumas coisas. Recomendo não buscar mais informações sobre o Sindicato ou qualquer coisa relacionada a ele. Se fizer isso, enfrentará um grande perigo e pode muito bem acabar sendo morto. Estou fazendo isso na tentativa de informar o máximo de pessoas possível sobre o que a NanoTrasen esconde. Algumas informações são bastante incertas devido à grande censura que ocorre pela NanoTrasen, e não poderei responder algumas dúvidas que surgirão ao longo deste livro. Por fim, espero que tenha uma boa leitura.
+         Antes de tudo, quero esclarecer algumas coisas. Recomendo não buscar mais informações sobre o Sindicato ou qualquer coisa relacionada a ele. Se fizer isso, enfrentará um grande perigo e pode muito bem acabar sendo morto. Estou fazendo isso na tentativa de informar o máximo de pessoas possível sobre o que a Syndicate esconde. Algumas informações são bastante incertas devido à grande censura que ocorre pela Syndicate, e não poderei responder algumas dúvidas que surgirão ao longo deste livro. Por fim, espero que tenha uma boa leitura.
 
         Ass. Olivia Hass
 
@@ -60476,17 +60476,6 @@ entities:
       linearDamping: 0
       canCollide: False
     - type: InsideEntityStorage
-- proto: ClothingHeadHatFlatcapBartenderNanotrasen
-  entities:
-  - uid: 23924
-    components:
-    - type: Transform
-      parent: 23915
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: ClothingHeadHatFlatcapBartenderOrion
   entities:
   - uid: 23922
@@ -60786,17 +60775,6 @@ entities:
 - proto: ClothingNeckCloakBoat
   entities:
   - uid: 22317
-    components:
-    - type: Transform
-      parent: 22310
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: ClothingNeckCloakNanotrasen
-  entities:
-  - uid: 22316
     components:
     - type: Transform
       parent: 22310
@@ -61466,17 +61444,6 @@ entities:
     components:
     - type: Transform
       parent: 10501
-    - type: Physics
-      angularDamping: 0
-      linearDamping: 0
-      canCollide: False
-    - type: InsideEntityStorage
-- proto: ClothingUniformJumpsuitNanotrasen
-  entities:
-  - uid: 22314
-    components:
-    - type: Transform
-      parent: 22310
     - type: Physics
       angularDamping: 0
       linearDamping: 0
@@ -112622,7 +112589,7 @@ entities:
 
         █   ▀██   █▄      █               █
 
-        █         ▀   █▀█▄█   ▄         █  [head=1]Nanotrasen[/head]
+        █         ▀   █▀█▄█   ▄         █  [head=1]Syndicate[/head]
 
         █               █      ▀█   ██▄   █
 
@@ -112646,7 +112613,7 @@ entities:
 
         Habilidades:
 
-        Afiliação com a Nanotrasen:
+        Afiliação com a Syndicate:
 
 
         [color=#002159][head=2] Trabalho [/head][/color]
@@ -112867,7 +112834,7 @@ entities:
 
         █   ▀██   █▄      █               █
 
-        █         ▀   █▀█▄█   ▄         █  [head=1]Nanotrasen[/head]
+        █         ▀   █▀█▄█   ▄         █  [head=1]Syndicate[/head]
 
         █               █      ▀█   ██▄   █
 

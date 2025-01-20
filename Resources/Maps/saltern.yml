@@ -57586,7 +57586,7 @@ entities:
       stampedBy:
       - stampedColor: '#006600FF'
         stampedName: stamp-component-stamped-name-centcom
-      content: "[color=#1b487e]███░███░░░░██░░░░[/color]\r\n[color=#1b487e]░██░████░░░██░░░░[/color]\r\n[color=#1b487e]░░█░██░██░░██░█░░[/color]               [head=3]NanoTrasen[/head]\r\n[color=#1b487e]░░░░██░░██░██░██░[/color] [bold]           NTSS-38a Saltern[/bold]\r\n[color=#1b487e]░░░░██░░░████░███[/color]\r\n=============================================\r\n                     NOTICE TO ENGINEERING STAFF\r\n=============================================\r\nDue to corporate restructuring, and the presence of an updated Mk8 Supermatter engine, we have decided to reduce operational costs on our newest model of \"Saltern\" class stations. This state of the art Supermatter engine costs 450 million Spesos to design, produce, and implement on our stations. We have opted to save on operational costs by not supplying this station with an Antimatter Engine, which we should remind you, costs 150 Million Spesos to produce. \n\nIf you are lacking in qualified and trained engineering personnel to operate the Supermatter engine, consider using these generators in combination with station Solar Arrays. Additional fuel may be obtained from the Logistics department.\n=============================================\r\n                            "
+      content: "[color=#1b487e]███░███░░░░██░░░░[/color]\r\n[color=#1b487e]░██░████░░░██░░░░[/color]\r\n[color=#1b487e]░░█░██░██░░██░█░░[/color]               [head=3]Syndicate[/head]\r\n[color=#1b487e]░░░░██░░██░██░██░[/color] [bold]           NTSS-38a Saltern[/bold]\r\n[color=#1b487e]░░░░██░░░████░███[/color]\r\n=============================================\r\n                     NOTICE TO ENGINEERING STAFF\r\n=============================================\r\nDue to corporate restructuring, and the presence of an updated Mk8 Supermatter engine, we have decided to reduce operational costs on our newest model of \"Saltern\" class stations. This state of the art Supermatter engine costs 450 million Spesos to design, produce, and implement on our stations. We have opted to save on operational costs by not supplying this station with an Antimatter Engine, which we should remind you, costs 150 Million Spesos to produce. \n\nIf you are lacking in qualified and trained engineering personnel to operate the Supermatter engine, consider using these generators in combination with station Solar Arrays. Additional fuel may be obtained from the Logistics department.\n=============================================\r\n                            "
     - type: Physics
       angularDamping: 0
       linearDamping: 0
@@ -58296,33 +58296,6 @@ entities:
     components:
     - type: Transform
       pos: 11.5,21.5
-      parent: 31
-- proto: PosterLegitNanotrasenLogo
-  entities:
-  - uid: 2691
-    components:
-    - type: Transform
-      pos: 5.5,26.5
-      parent: 31
-  - uid: 6309
-    components:
-    - type: Transform
-      pos: 5.5,24.5
-      parent: 31
-  - uid: 7803
-    components:
-    - type: Transform
-      pos: 0.5,19.5
-      parent: 31
-  - uid: 8047
-    components:
-    - type: Transform
-      pos: -33.5,6.5
-      parent: 31
-  - uid: 8266
-    components:
-    - type: Transform
-      pos: 34.5,-18.5
       parent: 31
 - proto: PosterLegitNoERP
   entities:

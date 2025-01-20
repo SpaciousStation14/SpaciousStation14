@@ -64012,19 +64012,6 @@ entities:
     - type: Transform
       pos: 20.5,1.5
       parent: 34
-- proto: PosterLegitNanotrasenLogo
-  entities:
-  - uid: 1991
-    components:
-    - type: Transform
-      pos: -20.5,-20.5
-      parent: 34
-  - uid: 12846
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -13.5,-36.5
-      parent: 34
 - proto: PosterLegitNoERP
   entities:
   - uid: 2231

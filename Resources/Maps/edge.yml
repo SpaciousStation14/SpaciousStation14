@@ -10387,18 +10387,6 @@ entities:
     - type: Transform
       pos: -17.78467,39.023205
       parent: 2
-- proto: BannerNanotrasen
-  entities:
-  - uid: 588
-    components:
-    - type: Transform
-      pos: -25.5,44.5
-      parent: 2
-  - uid: 589
-    components:
-    - type: Transform
-      pos: -21.5,44.5
-      parent: 2
 - proto: BarSign
   entities:
   - uid: 590
@@ -80085,43 +80073,6 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 12.5,9.5
-      parent: 2
-- proto: PosterLegitNanotrasenLogo
-  entities:
-  - uid: 12137
-    components:
-    - type: Transform
-      pos: -26.5,44.5
-      parent: 2
-  - uid: 12138
-    components:
-    - type: Transform
-      pos: -4.5,32.5
-      parent: 2
-  - uid: 12139
-    components:
-    - type: Transform
-      pos: -18.5,34.5
-      parent: 2
-  - uid: 12140
-    components:
-    - type: Transform
-      pos: -23.5,37.5
-      parent: 2
-  - uid: 12141
-    components:
-    - type: Transform
-      pos: -20.5,44.5
-      parent: 2
-  - uid: 12142
-    components:
-    - type: Transform
-      pos: -22.5,45.5
-      parent: 2
-  - uid: 12143
-    components:
-    - type: Transform
-      pos: -24.5,45.5
       parent: 2
 - proto: PosterLegitNoERP
   entities:

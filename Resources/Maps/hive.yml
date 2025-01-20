@@ -18802,38 +18802,6 @@ entities:
     - type: Transform
       pos: 71.5,2.5
       parent: 1
-- proto: BannerNanotrasen
-  entities:
-  - uid: 2051
-    components:
-    - type: Transform
-      pos: 10.5,-2.5
-      parent: 1
-  - uid: 2052
-    components:
-    - type: Transform
-      pos: 10.5,-9.5
-      parent: 1
-  - uid: 6263
-    components:
-    - type: Transform
-      pos: 106.003006,12.135057
-      parent: 1
-  - uid: 6264
-    components:
-    - type: Transform
-      pos: 103.95092,12.114209
-      parent: 1
-  - uid: 7062
-    components:
-    - type: Transform
-      pos: 92.5,5.5
-      parent: 1
-  - uid: 7063
-    components:
-    - type: Transform
-      pos: 92.5,2.5
-      parent: 1
 - proto: BannerRevolution
   entities:
   - uid: 16777
@@ -129685,7 +129653,7 @@ entities:
     - type: Paper
       content: >2-
 
-        Official Nanotrasen Memo:
+        Official Syndicate Memo:
 
 
         In order to transport resources to the supply distribution center consult the logistics officer to set up a portal between stations. They have been given a handheld teleportation device.
@@ -129700,7 +129668,7 @@ entities:
     - type: Paper
       content: >2-
 
-        Official Nanotrasen Memo:
+        Official Syndicate Memo:
 
 
         In order to transport resources to the supply distribution center consult the logistics officer to set up a portal between stations. They have been given a handheld teleportation device.
@@ -131350,43 +131318,6 @@ entities:
     components:
     - type: Transform
       pos: 22.5,-42.5
-      parent: 1
-- proto: PosterLegitNanotrasenLogo
-  entities:
-  - uid: 7051
-    components:
-    - type: Transform
-      pos: 77.5,6.5
-      parent: 1
-  - uid: 7052
-    components:
-    - type: Transform
-      pos: 83.5,6.5
-      parent: 1
-  - uid: 7053
-    components:
-    - type: Transform
-      pos: 83.5,1.5
-      parent: 1
-  - uid: 7054
-    components:
-    - type: Transform
-      pos: 77.5,1.5
-      parent: 1
-  - uid: 7055
-    components:
-    - type: Transform
-      pos: 89.5,6.5
-      parent: 1
-  - uid: 7056
-    components:
-    - type: Transform
-      pos: 89.5,1.5
-      parent: 1
-  - uid: 16567
-    components:
-    - type: Transform
-      pos: 50.5,40.5
       parent: 1
 - proto: PosterLegitNoTouching
   entities:
@@ -147029,54 +146960,6 @@ entities:
     - type: Transform
       pos: 63.5,-18.5
       parent: 1
-- proto: SignNanotrasen1
-  entities:
-  - uid: 2616
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 42.5,1.5
-      parent: 1
-- proto: SignNanotrasen2
-  entities:
-  - uid: 2617
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 43.5,1.5
-      parent: 1
-- proto: SignNanotrasen3
-  entities:
-  - uid: 2618
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 44.5,1.5
-      parent: 1
-- proto: SignNanotrasen4
-  entities:
-  - uid: 2619
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 45.5,1.5
-      parent: 1
-- proto: SignNanotrasen5
-  entities:
-  - uid: 2620
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 46.5,1.5
-      parent: 1
-- proto: SignPrison
-  entities:
-  - uid: 5537
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 71.5,23.5
-      parent: 1
 - proto: SignPsychology
   entities:
   - uid: 12581
@@ -152428,7 +152311,7 @@ entities:
       setupAvailableNetworks:
       - SurveillanceCameraEntertainment
       nameSet: True
-      id: 'Nanotrasen News and Interviews '
+      id: 'Syndicate News and Interviews '
   - uid: 2905
     components:
     - type: Transform
@@ -176954,7 +176837,7 @@ entities:
     - type: BombingTarget
     - type: NavMapBeacon
       color: '#9FED58FF'
-      text: Nanotrasen News
+      text: Syndicate News
   - uid: 16878
     components:
     - type: Transform

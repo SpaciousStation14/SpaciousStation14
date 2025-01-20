@@ -19965,13 +19965,6 @@ entities:
     - type: Transform
       pos: 40.5,5.5
       parent: 2
-- proto: BannerNanotrasen
-  entities:
-  - uid: 128
-    components:
-    - type: Transform
-      pos: 31.5,-21.5
-      parent: 2
 - proto: BannerRevolution
   entities:
   - uid: 20994
@@ -60628,13 +60621,6 @@ entities:
     components:
     - type: Transform
       pos: 54.98519,-35.41314
-      parent: 2
-- proto: ClothingNeckCloakNanotrasen
-  entities:
-  - uid: 16842
-    components:
-    - type: Transform
-      pos: -31.430737,31.650105
       parent: 2
 - proto: ClothingNeckCloakTrans
   entities:
@@ -105740,7 +105726,7 @@ entities:
       - stampedColor: '#00BE00FF'
         stampedName: stamp-component-stamped-name-approved
       content: >-
-        [color=#009100]█▄ █ ▀█▀    [head=3]NanoTrasen Memo[/head]
+        [color=#009100]█▄ █ ▀█▀    [head=3]Syndicate Memo[/head]
 
         █ ▀█     █        To the Core Engineering Team[/color]
 
@@ -105754,7 +105740,7 @@ entities:
         It is now a spare substation for any case where a substation or APC becomes damaged or wears out over time.
 
 
-        [italic]Best wishes, [bold]NanoTrasen Technical Build Team.[/bold][/italic]
+        [italic]Best wishes, [bold]Syndicate Technical Build Team.[/bold][/italic]
   - uid: 21554
     components:
     - type: Transform
@@ -120392,46 +120378,6 @@ entities:
     components:
     - type: Transform
       pos: 47.5,-11.5
-      parent: 2
-- proto: SignNanotrasen1
-  entities:
-  - uid: 2086
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 34.5,-21.5
-      parent: 2
-- proto: SignNanotrasen2
-  entities:
-  - uid: 2087
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 35.5,-21.5
-      parent: 2
-- proto: SignNanotrasen3
-  entities:
-  - uid: 2088
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 36.5,-21.5
-      parent: 2
-- proto: SignNanotrasen4
-  entities:
-  - uid: 2089
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 37.5,-21.5
-      parent: 2
-- proto: SignNanotrasen5
-  entities:
-  - uid: 2090
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 38.5,-21.5
       parent: 2
 - proto: SignNews
   entities:

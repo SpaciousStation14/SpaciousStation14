@@ -8360,18 +8360,6 @@ entities:
     - type: Transform
       pos: -17.5,-2.5
       parent: 1
-- proto: BannerNanotrasen
-  entities:
-  - uid: 1237
-    components:
-    - type: Transform
-      pos: -11.5,16.5
-      parent: 1
-  - uid: 1238
-    components:
-    - type: Transform
-      pos: -0.5,16.5
-      parent: 1
 - proto: BannerRevolution
   entities:
   - uid: 6024
@@ -77243,41 +77231,6 @@ entities:
     components:
     - type: Transform
       pos: 30.5,44.5
-      parent: 1
-- proto: SignNanotrasen1
-  entities:
-  - uid: 4363
-    components:
-    - type: Transform
-      pos: -12.5,26.5
-      parent: 1
-- proto: SignNanotrasen2
-  entities:
-  - uid: 4169
-    components:
-    - type: Transform
-      pos: -11.5,26.5
-      parent: 1
-- proto: SignNanotrasen3
-  entities:
-  - uid: 4168
-    components:
-    - type: Transform
-      pos: -10.5,26.5
-      parent: 1
-- proto: SignNanotrasen4
-  entities:
-  - uid: 4190
-    components:
-    - type: Transform
-      pos: -9.5,26.5
-      parent: 1
-- proto: SignNanotrasen5
-  entities:
-  - uid: 4309
-    components:
-    - type: Transform
-      pos: -8.5,26.5
       parent: 1
 - proto: SignNosmoking
   entities:

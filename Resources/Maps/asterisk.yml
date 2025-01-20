@@ -6597,13 +6597,6 @@ entities:
     - type: Transform
       pos: 33.5,-17.5
       parent: 2
-- proto: BannerNanotrasen
-  entities:
-  - uid: 10106
-    components:
-    - type: Transform
-      pos: 39.5,-5.5
-      parent: 2
 - proto: BannerScience
   entities:
   - uid: 2648

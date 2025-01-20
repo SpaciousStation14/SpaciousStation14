@@ -126,7 +126,7 @@
   parent: PosterBase
   id: PosterContrabandMissingGloves
   name: "Missing Gloves"
-  description: "This poster references the uproar that followed Nanotrasen's financial cuts toward insulated-glove purchases."
+  description: "This poster references the uproar that followed Syndicate's financial cuts toward insulated-glove purchases."
   components:
   - type: Sprite
     state: poster9_contraband
@@ -135,7 +135,7 @@
   parent: PosterBase
   id: PosterContrabandHackingGuide
   name: "Hacking Guide"
-  description: "This poster details the internal workings of the common Nanotrasen airlock. Sadly, it appears out of date."
+  description: "This poster details the internal workings of the common Syndicate airlock. Sadly, it appears out of date."
   components:
   - type: Sprite
     state: poster10_contraband
@@ -144,7 +144,7 @@
   parent: PosterBase
   id: PosterContrabandRIPBadger
   name: "RIP Badger"
-  description: "This seditious poster references Nanotrasen's genocide of a space station full of badgers."
+  description: "This seditious poster references Syndicate's genocide of a space station full of badgers."
   components:
   - type: Sprite
     state: poster11_contraband
@@ -590,7 +590,7 @@
   components:
     - type: Sprite
       state: poster62_contraband
-      
+
 - type: entity
   parent: PosterBase
   id: PosterContrabandMissingSpacepen
@@ -848,7 +848,7 @@
   parent: PosterBase
   id: PosterLegitPDAAd
   name: "PDA Ad"
-  description: "A poster advertising the latest PDA from Nanotrasen suppliers."
+  description: "A poster advertising the latest PDA from Syndicate suppliers."
   components:
   - type: Sprite
     state: poster28_legit
@@ -857,7 +857,7 @@
   parent: PosterBase
   id: PosterLegitEnlist
   name: "Enlist"
-  description: "Enlist in the NanoTrasen ERT reserves today!" # DeltaV - expunged blatant reference to Division of Asset Protection death squads
+  description: "Enlist in the Syndicate ERT reserves today!" # DeltaV - expunged blatant reference to Division of Asset Protection death squads
   components:
   - type: Sprite
     state: poster29_legit
@@ -929,7 +929,7 @@
   parent: PosterBase
   id: PosterLegitThereIsNoGasGiant
   name: "There Is No Gas Giant"
-  description: "Nanotrasen has issued posters, like this one, to all stations reminding them that rumours of a gas giant are false."
+  description: "Syndicate has issued posters, like this one, to all stations reminding them that rumours of a gas giant are false."
   components:
   - type: Sprite
     state: poster37_legit
@@ -1027,7 +1027,7 @@
 - type: entity
   parent: PosterBase
   id: PosterLegitVacation
-  name: "Nanotrasen Corporate Perks: Vacation"
+  name: "Syndicate Corporate Perks: Vacation"
   description: "This informational poster provides information on some of the prizes available via the NT Corporate Perks program, including a two-week vacation for two on the resort world Idyllus."
   components:
     - type: Sprite

@@ -17747,18 +17747,6 @@ entities:
     - type: Transform
       pos: 30.5,-32.5
       parent: 6747
-- proto: BannerNanotrasen
-  entities:
-  - uid: 3259
-    components:
-    - type: Transform
-      pos: -9.5,-54.5
-      parent: 6747
-  - uid: 3260
-    components:
-    - type: Transform
-      pos: -9.5,-51.5
-      parent: 6747
 - proto: BannerRevolution
   entities:
   - uid: 7098
@@ -130129,18 +130117,6 @@ entities:
     - type: Transform
       pos: 63.5,-32.5
       parent: 6747
-- proto: PosterLegitNanotrasenLogo
-  entities:
-  - uid: 6724
-    components:
-    - type: Transform
-      pos: 37.5,-44.5
-      parent: 6747
-  - uid: 6725
-    components:
-    - type: Transform
-      pos: 43.5,-44.5
-      parent: 6747
 - proto: PosterLegitNoERP
   entities:
   - uid: 11774
@@ -149156,41 +149132,6 @@ entities:
     components:
     - type: Transform
       pos: 14.5,-40.5
-      parent: 6747
-- proto: SignNanotrasen1
-  entities:
-  - uid: 6719
-    components:
-    - type: Transform
-      pos: 38.5,-44.5
-      parent: 6747
-- proto: SignNanotrasen2
-  entities:
-  - uid: 6720
-    components:
-    - type: Transform
-      pos: 39.5,-44.5
-      parent: 6747
-- proto: SignNanotrasen3
-  entities:
-  - uid: 6721
-    components:
-    - type: Transform
-      pos: 40.5,-44.5
-      parent: 6747
-- proto: SignNanotrasen4
-  entities:
-  - uid: 6722
-    components:
-    - type: Transform
-      pos: 41.5,-44.5
-      parent: 6747
-- proto: SignNanotrasen5
-  entities:
-  - uid: 6723
-    components:
-    - type: Transform
-      pos: 42.5,-44.5
       parent: 6747
 - proto: SignNews
   entities:
