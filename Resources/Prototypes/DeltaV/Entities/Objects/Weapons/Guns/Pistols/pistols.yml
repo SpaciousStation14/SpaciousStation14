@@ -120,6 +120,13 @@
     guides: [ SecurityWeapons ]
 
 - type: entity
+  name: Pollock
+  parent: WeaponPistolPollock
+  id: WeaponPistolPollockCivilian
+  description: A compact and mass-produced combat pistol. Uses .35 auto ammo.
+               The serial number on the handguard marks this gun as belonging to an civilian.
+
+- type: entity
   name: psi-breaker
   parent: BaseWeaponPistol
   id: WeaponPistolPsiBreaker
