@@ -52,6 +52,7 @@
   - type: MobStyle
     styleGain: 0.5 # innate gain and cap.
     styleCap: 0    # Can be set higher for "innately stylish" mobs.
+    styleGainBackup: 0.5 # when style is negative, use either styleGain or styleGainBackup, whichever is greater. Please do not make this one negative, or else something may break.
 
 - type: entity
   save: false

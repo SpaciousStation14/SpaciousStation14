@@ -3,7 +3,7 @@
   id: ClothingOuterCoatTrenchStyleDebug
   name: stylish trenchcoat
   suffix: DEBUG
-  description: Doesn't look any different from a normal trenchcoat, but it feels so much more [italic]stylish[/italic].
+  description: Doesn't look any different from a normal trenchcoat, but it feels so much more stylish.
   components:
   - type: ItemStyle
     styleCap: 50
@@ -32,6 +32,7 @@
   name: annoying drozd
   parent: WeaponSubMachineGunDrozd
   id: WeaponSubMachineGunDrozdStyleDebug
+  suffix: DEBUG
   description: An exercise in futility.
   components:
   - type: Gun
@@ -41,6 +42,7 @@
   name: a considerably sized python
   parent: WeaponRevolverPython
   id: WeaponRevolverPythonStyleDebug
+  suffix: DEBUG
   description: A perfectly-average sized iron. Very stylish to wear on your hip.
   components:
   - type: Gun

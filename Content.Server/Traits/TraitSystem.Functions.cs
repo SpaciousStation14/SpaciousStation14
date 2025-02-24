@@ -22,6 +22,7 @@ using Content.Shared.Damage.Components;
 using Content.Shared.NPC.Systems;
 using Content.Shared.Weapons.Melee;
 using Robust.Shared.Audio;
+using Content.Shared._Spacious.Style;
 
 namespace Content.Server.Traits;
 
@@ -675,5 +676,39 @@ public sealed partial class TraitModifyUnarmed : TraitFunction
             melee.AttackRate *= AttackRateModifier.Value;
 
         entityManager.Dirty(uid, melee);
+    }
+
+    // Spacious
+
+    public sealed partial class TraitModifyStyle : TraitFunction
+    {
+        [DataField]
+        public float StyleCap = 0f;
+
+        [DataField]
+        public float StyleGain = 0f;
+
+        [DataField]
+        public float BackupStyleGain = 0f;
+
+        [DataField]
+        public float DodgeCostProjectile = 1f;
+
+        [DataField]
+        public float DodgeCostExplosion = 1f;
+
+        public override void OnPlayerSpawn(EntityUid mob,
+            IComponentFactory factory,
+            IEntityManager entMan,
+            ISerializationManager serializationManager)
+        {
+            if (!entMan.TryGetComponent<MobStyleComponent>(mob, out var style))
+                return;
+            style.InnateStyleCap += StyleCap;
+            style.InnateStyleGain += StyleGain;
+            style.BackupInnateStyleGain += BackupStyleGain;
+            style.DodgeCostProjectile *= DodgeCostProjectile;
+            style.DodgeCostExplosion *= DodgeCostExplosion;
+        }
     }
 }
