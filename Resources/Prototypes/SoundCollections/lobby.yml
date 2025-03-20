@@ -28,7 +28,7 @@
     - /Audio/_SpaceWizards/Lobby/pwmur.ogg
     # Delta-V lobby music
     - /Audio/_DeltaV/Lobby/Patricia_Taxxon_-_Minute.ogg
-    - /Audio/_DeltaV/Lobby/Patricia_Taxxon_-_Chipshop.ogg
+    #- /Audio/_DeltaV/Lobby/Patricia_Taxxon_-_Chipshop.ogg #don't know where it went but it's causing testfails on my other PRs so fuck you -Ducks
     - /Audio/_DeltaV/Lobby/thestation.ogg
     # Goobstation lobby music
     - /Audio/_Goobstation/Lobby/skubstep.ogg
