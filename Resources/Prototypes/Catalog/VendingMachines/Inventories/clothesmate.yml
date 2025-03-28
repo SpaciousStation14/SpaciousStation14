@@ -21,6 +21,8 @@
     ClothingHandsGlovesColorBlack: 4
     ClothingEyesGlassesCheapSunglasses: 2
     ClothingClothWrap: 4
+    ClothingNeckCollarBlue: 1
+    ClothingNeckCollarBlack: 1
   contrabandInventory:
     ClothingMaskNeckGaiter: 2
     ClothingUniformJumpsuitTacticool: 1

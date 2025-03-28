@@ -484,15 +484,15 @@
     - BoxSurvival
   requirements:
     - !type:CharacterDepartmentRequirement
-       inverted: true
-       departments:
-         - Security
-         - Medical
-         - Engineering
+        inverted: true
+        departments:
+          - Security
+          - Medical
+          - Engineering
     - !type:CharacterJobRequirement
-       inverted: true
-       jobs:
-         - Clown
+        inverted: true
+        jobs:
+          - Clown
     - !type:CharacterItemGroupRequirement
       group: LoadoutBoxKits
 
@@ -504,8 +504,8 @@
     - BoxSurvivalEngineering
   requirements:
     - !type:CharacterDepartmentRequirement
-       departments:
-         - Engineering
+        departments:
+          - Engineering
     - !type:CharacterItemGroupRequirement
       group: LoadoutBoxKits
 
@@ -517,12 +517,12 @@
     - BoxSurvivalSecurity
   requirements:
     - !type:CharacterDepartmentRequirement
-       departments:
-         - Security
+        departments:
+          - Security
     - !type:CharacterJobRequirement
-       inverted: true
-       jobs:
-         - Brigmedic
+        inverted: true
+        jobs:
+          - Brigmedic
     - !type:CharacterItemGroupRequirement
       group: LoadoutBoxKits
 
@@ -534,8 +534,8 @@
     - BoxSurvivalBrigmedic
   requirements:
     - !type:CharacterJobRequirement
-       jobs:
-         - Brigmedic
+        jobs:
+          - Brigmedic
     - !type:CharacterItemGroupRequirement
       group: LoadoutBoxKits
 
@@ -547,8 +547,8 @@
     - BoxSurvivalMedical
   requirements:
     - !type:CharacterDepartmentRequirement
-       departments:
-         - Medical
+        departments:
+          - Medical
     - !type:CharacterItemGroupRequirement
       group: LoadoutBoxKits
 
@@ -686,9 +686,9 @@
     - MedkitCombatFilled
   requirements:
     - !type:CharacterJobRequirement
-       jobs:
-         - ChiefMedicalOfficer
-         - Brigmedic
+        jobs:
+          - ChiefMedicalOfficer
+          - Brigmedic
     - !type:CharacterItemGroupRequirement
       group: LoadoutBoxKits
 
@@ -714,11 +714,11 @@
     - Flash
   requirements:
     - !type:CharacterDepartmentRequirement
-       departments:
-         - Security
+        departments:
+          - Security
     - !type:CharacterJobRequirement
-       jobs:
-         - Brigmedic
+        jobs:
+          - Brigmedic
 
 - type: loadout
   id: LoadoutItemPAI
@@ -888,5 +888,35 @@
     - !type:CharacterItemGroupRequirement
       group: LoadoutCards
     - !type:CharacterDepartmentRequirement
-       departments:
-         - Command
+        departments:
+          - Command
+
+- type: loadout
+  id: LoadoutItemRemoteSignaller
+  category: Items
+  cost: 1
+  items:
+    - RemoteSignaller
+
+# Leashes
+- type: loadout
+  id: LoadoutItemLeashBasic
+  category: Items
+  cost: 2
+  exclusive: true
+  items:
+  - LeashBasic
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutFun
+
+- type: loadout
+  id: LoadoutItemLeashShort
+  category: Items
+  cost: 2
+  exclusive: true
+  items:
+  - ShortLeash
+  requirements:
+  - !type:CharacterItemGroupRequirement
+    group: LoadoutFun

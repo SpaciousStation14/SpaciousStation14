@@ -451,12 +451,12 @@
     - !type:CharacterItemGroupRequirement
       group: LoadoutNeck
     - !type:CharacterDepartmentRequirement
-       departments:
-         - Civilian
+      departments:
+        - Civilian
     - !type:CharacterDepartmentRequirement
-       inverted: true
-       departments:
-         - Command
+      inverted: true
+      departments:
+        - Command
 
 - type: loadout
   id: LoadoutNeckBedsheetRainbow
@@ -469,12 +469,12 @@
     - !type:CharacterItemGroupRequirement
       group: LoadoutNeck
     - !type:CharacterDepartmentRequirement
-       departments:
-         - Civilian
+      departments:
+        - Civilian
     - !type:CharacterDepartmentRequirement
-       inverted: true
-       departments:
-         - Command
+      inverted: true
+      departments:
+        - Command
 
 - type: loadout
   id: LoadoutNeckBedsheetWhite
@@ -488,12 +488,12 @@
     - !type:CharacterItemGroupRequirement
       group: LoadoutNeck
     - !type:CharacterDepartmentRequirement
-       departments:
-         - Civilian
+      departments:
+        - Civilian
     - !type:CharacterDepartmentRequirement
-       inverted: true
-       departments:
-         - Command
+      inverted: true
+      departments:
+        - Command
 
 - type: loadout
   id: LoadoutNeckBedsheetNT
@@ -661,3 +661,159 @@
   requirements:
     - !type:CharacterItemGroupRequirement
       group: LoadoutNeck
+
+# Generic collars
+- type: loadout
+  id: LoadoutItemsNeckBlueCollar
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+    - ClothingNeckCollarBlue
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutNeck2
+- type: loadout
+  id: LoadoutItemsNeckBlackCollar
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+    - ClothingNeckCollarBlack
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutNeck2
+- type: loadout
+  id: LoadoutItemsNeckPinkCollar
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+    - ClothingNeckCollarPink
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutNeck2
+- type: loadout
+  id: LoadoutItemsNeckSyndieCollar
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+    - ClothingNeckCollarSyndi
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutNeck2
+
+- type: loadout
+  id: LoadoutItemsNeckShockCollar
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+    - ShockCollar
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: LoadoutNeck2
+
+# Collars
+- type: loadout
+  id: LoadoutCommandCapCollar
+  category: Jobs
+  cost: 1
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - Captain
+  items:
+    - ClothingNeckCollarCmd
+
+- type: loadout
+  id: LoadoutCargoNeckCollar
+  category: Jobs
+  cost: 1
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - CargoTechnician
+        - SalvageSpecialist
+        - Quartermaster
+  items:
+    - ClothingNeckCollarLogi
+
+- type: loadout
+  id: LoadoutEngineeringNeckCollar
+  category: Jobs
+  cost: 1
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - StationEngineer
+        - AtmosphericTechnician
+        - ChiefEngineer
+  items:
+    - ClothingNeckCollarEngi
+
+- type: loadout
+  id: LoadoutMedicalNeckCollar
+  category: Jobs
+  cost: 1
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - MedicalDoctor
+        - Paramedic
+        - ChiefMedicalOfficer
+        - MedicalIntern
+        - Brigmedic
+  items:
+    - ClothingNeckCollarMed
+
+- type: loadout
+  id: LoadoutScienceNeckCollar
+  category: Jobs
+  cost: 1
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - Scientist
+        - ResearchAssistant
+        - ResearchDirector
+  items:
+    - ClothingNeckCollarEpi
+
+- type: loadout
+  id: LoadoutSecurityNeckCollar
+  category: Jobs
+  cost: 1
+  requirements:
+    - !type:CharacterJobRequirement
+      jobs:
+        - SecurityOfficer
+        - Warden
+        - HeadOfSecurity
+  items:
+    - ClothingNeckCollarSec
+
+- type: loadout
+  id: LoadoutItemsNeckBlueCollar
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+    - ClothingNeckCollarBlue
+
+- type: loadout
+  id: LoadoutItemsNeckBlackCollar
+  category: Neck
+  cost: 1
+  exclusive: true
+  items:
+    - ClothingNeckCollarBlack
+
+- type: loadout
+  id: LoadoutItemsNeckSyndieCollar
+  category: Neck
+  cost: 3
+  exclusive: true
+  items:
+    - ClothingNeckCollarSyndi

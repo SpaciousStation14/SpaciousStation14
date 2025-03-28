@@ -320,3 +320,7 @@
 - type: loadoutCategory
   id: Uniform
   root: true
+
+- type: loadoutCategory
+  id: ItemsLewd
+  root: true

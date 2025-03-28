@@ -1,7 +1,10 @@
+using System.Numerics;
+using Content.Client.Anomaly.Ui;
 using Content.Shared.Physics;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Shared.Enums;
+using Robust.Shared.Map;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Dynamics.Joints;
 
@@ -27,6 +30,7 @@ public sealed class JointVisualsOverlay : Overlay
     {
         _drawn.Clear();
         var worldHandle = args.WorldHandle;
+        worldHandle.SetTransform(Vector2.Zero, Angle.Zero);
 
         var spriteSystem = _entManager.System<SpriteSystem>();
         var xformSystem = _entManager.System<SharedTransformSystem>();

@@ -163,6 +163,7 @@
     - DrinkShotGlass
     - DrinkGlassCoupeShaped
     - CustomDrinkJug
+    - LeashBasic
     - FoodPlate
     - FoodPlateSmall
     - FoodPlatePlastic
@@ -1482,6 +1483,8 @@
     - CarpetPurple
     - CarpetCyan
     - CarpetWhite
+    # Collars
+    - ClothingNeckCollarCmd
   - type: EmagLatheRecipes
     emagStaticRecipes:
     - ClothingHeadHatCentcomcap

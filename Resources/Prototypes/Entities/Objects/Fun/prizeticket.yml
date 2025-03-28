@@ -288,6 +288,15 @@
       - id: PlushieShadowkin
         prob: 0.80
         orGroup: Prize
+      - id: PlushieHypnoTempLO
+        prob: 0.80
+        orGroup: Prize
+      - id: PlushieHypnoTempHoP
+        prob: 0.80
+        orGroup: Prize
+      - id: PlushieHypnoTempCMO
+        prob: 0.80
+        orGroup: Prize
       # Uncommon
       - id: PrizeTicket60
         prob: 0.50
@@ -396,5 +405,8 @@
         prob: 0.30
         orGroup: Prize
       - id: BwoinkHammer
+        prob: 0.30
+        orGroup: Prize
+      - id: PlushieHypnoTempCap
         prob: 0.30
         orGroup: Prize

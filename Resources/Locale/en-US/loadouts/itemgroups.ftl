@@ -10,6 +10,8 @@ character-item-group-LoadoutOuter = Civilian Outerwear
 character-item-group-LoadoutBelt = Civilian Belts
 character-item-group-LoadoutShoes = Civilian Shoes
 character-item-group-LoadoutUniformsCivilian = Civilian Uniforms
+character-item-group-LoadoutFun = Fun
+character-item-group-LoadoutLewd = Lewd
 
 # Generic - Items
 character-item-group-LoadoutAirTank = Emergency Air Tanks
