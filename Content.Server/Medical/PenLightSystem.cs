@@ -12,6 +12,7 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Traits.Assorted.Components;
 using Content.Shared._Finster.Rulebook;
+using Content.Shared._Finster.Rulebook.Events;
 using Robust.Server.GameObjects;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
@@ -55,6 +56,35 @@ public sealed class PenLightSystem : EntitySystem
             || !_powerCell.HasDrawCharge(uid, user: args.User))
             return;
 
+        var ev = new SkillTypeCheckEvent(
+            User: args.User,
+            Skill: SkillType.Diagnosis,
+            SituationalBonus: 0,
+            CriticalSuccess: false,
+            CriticalFailure: false
+        );
+
+        RaiseLocalEvent(ref ev);
+
+        // Handles skill check results
+        if (!ev.Result)
+        {
+            if (ev.CriticalFailure)
+            {
+                _popup.PopupEntity(Loc.GetString("penlight-critical-failure"), args.User, args.User);
+            }
+            else
+            {
+                _popup.PopupEntity(Loc.GetString("penlight-failure"), args.User, args.User);
+            }
+            return;
+        }
+
+        if (ev.CriticalSuccess)
+        {
+            _popup.PopupEntity(Loc.GetString("penlight-critical-success"), args.User, args.User);
+        }
+
         OpenUserInterface(args.User, uid);
         Diagnose(uid, args.Target.Value);
         args.Handled = true;
@@ -87,40 +117,6 @@ public sealed class PenLightSystem : EntitySystem
         {
             _popup.PopupEntity(Loc.GetString("penlight-cannot-examine-self"), uid, user);
             return false;
-        }
-
-        // Spacious - Skill Check test
-        var skillSystem = EntityManager.System<SharedSkillCheckSystem>();
-
-        // Skill-based check using FirstAid
-        if (!skillSystem.TrySkillCheck(
-            user: user,
-            skill: SkillType.FirstAid,  // Changed from AttributeType.Intelligence
-            out var critSuccess,
-            out var critFailure))
-        {
-            // Failure case (either normal or critical)
-            if (critFailure)
-            {
-                _popup.PopupEntity(Loc.GetString("healing-skill-critical-failure"), uid, user);
-            }
-            else
-            {
-                _popup.PopupEntity(Loc.GetString("healing-skill-failure"), uid, user);
-            }
-            return true;
-        }
-        else
-        {
-            // Success case (either normal or critical)
-            if (critSuccess)
-            {
-                _popup.PopupEntity(Loc.GetString("healing-skill-critical-success"), uid, user);
-            }
-            else
-            {
-                _popup.PopupEntity(Loc.GetString("healing-skill-success"), uid, user);
-            }
         }
 
         return _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, user, component.ExamSpeed, new PenLightDoAfterEvent(),

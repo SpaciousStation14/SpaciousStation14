@@ -1,4 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
+using Content.Shared._Finster.Rulebook.Events;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Database;
 using Content.Shared.DoAfter;
@@ -7,8 +8,10 @@ using Content.Shared.Interaction;
 using Content.Shared.Popups;
 using Content.Shared.Prying.Components;
 using Content.Shared.Verbs;
+using Content.Shared.Damage.Systems;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Serialization;
+using Robust.Shared.Network;
 using PryUnpoweredComponent = Content.Shared.Prying.Components.PryUnpoweredComponent;
 
 namespace Content.Shared.Prying.Systems;
@@ -22,6 +25,8 @@ public sealed class PryingSystem : EntitySystem
     [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
     [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
     [Dependency] private readonly SharedPopupSystem Popup = default!;
+    [Dependency] private readonly INetManager _net = default!;
+    [Dependency] private readonly StaminaSystem _stamina = default!;
 
     public override void Initialize()
     {
@@ -157,6 +162,41 @@ public sealed class PryingSystem : EntitySystem
             return;
         if (args.Target is null)
             return;
+
+        if (_net.IsServer)
+        {
+            var skillev = new AttributeCheckEvent(
+                User: args.User,
+                Attribute: _Finster.Rulebook.AttributeType.Strength,
+                Bonus: 0,
+                CriticalSuccess: false,
+                CriticalFailure: false
+            );
+
+            RaiseLocalEvent(ref skillev);
+
+            // Handle skill check results
+            if (!skillev.Result)
+            {
+                // Failed the skill check
+                if (skillev.CriticalFailure)
+                {
+                    Popup.PopupEntity(Loc.GetString("strength-critical-failure"), args.User, args.User);
+                    _stamina.TakeStaminaDamage(args.User, 100f, visual: false);
+                }
+                else
+                {
+                    Popup.PopupEntity(Loc.GetString("strength-failure"), args.User, args.User);
+                    _stamina.TakeStaminaDamage(args.User, 20f, visual: false);
+                }
+                return;
+            }
+
+            if (skillev.CriticalSuccess)
+            {
+                Popup.PopupEntity(Loc.GetString("strength-critical-success"), args.User, args.User);
+            }
+        }
 
         TryComp<PryingComponent>(args.Used, out var comp);
 

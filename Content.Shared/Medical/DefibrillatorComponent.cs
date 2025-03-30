@@ -61,6 +61,26 @@ public sealed partial class DefibrillatorComponent : Component
     [DataField]
     public bool CanDefibCrit = true;
 
+    [DataField("criticalFailDamage")]
+    public DamageSpecifier CriticalFailDamage = new()
+    {
+        DamageDict = new()
+        {
+            { "Blunt", 20f }, // Example values - adjust as needed
+            { "Shock", 15f }
+        }
+    };
+
+    [DataField("criticalSuccessHealBonus")]
+    public DamageSpecifier CriticalSuccessHealBonus = new()
+    {
+        DamageDict = new()
+        {
+            { "Blunt", -50f }, // Negative values heal
+            { "Shock", -50f }
+        }
+    };
+
     /// <summary>
     /// The sound when someone is zapped.
     /// </summary>

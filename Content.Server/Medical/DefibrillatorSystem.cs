@@ -22,6 +22,7 @@ using Content.Shared.PowerCell;
 using Content.Shared.Timing;
 using Content.Shared.Toggleable;
 using Content.Shared._Finster.Rulebook;
+using Content.Shared._Finster.Rulebook.Events;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
@@ -75,8 +76,49 @@ public sealed class DefibrillatorSystem : EntitySystem
         if (!CanZap(uid, target, args.User, component))
             return;
 
+        // Add skill check here before proceeding with the zap
+        var ev = new SkillTypeCheckEvent(
+            User: args.User,
+            Skill: SkillType.FirstAid,  // Or create a Defibrillation skill if needed
+            SituationalBonus: 0,
+            CriticalSuccess: false,
+            CriticalFailure: false
+        );
+
+        RaiseLocalEvent(ref ev);
+
+        // Handle skill check results
+        if (!ev.Result)
+        {
+            // Failed the skill check
+            if (ev.CriticalFailure)
+            {
+                _popup.PopupEntity(Loc.GetString("defibrillator-critical-failure"), args.User, args.User);
+                _damageable.TryChangeDamage(target, component.CriticalFailDamage, true, origin: uid);
+            }
+            else
+            {
+                _popup.PopupEntity(Loc.GetString("defibrillator-failure"), args.User, args.User);
+            }
+
+            // Play failure sound and consume charge
+            _audio.PlayPvs(component.FailureSound, uid);
+            _powerCell.TryUseActivatableCharge(uid, user: args.User);
+            args.Handled = true;
+            return;
+        }
+
+        // Success - proceed with normal zap
         args.Handled = true;
         Zap(uid, target, args.User, component);
+
+        // Additional success effects
+        if (ev.CriticalSuccess)
+        {
+            _popup.PopupEntity(Loc.GetString("defibrillator-critical-success"), args.User, args.User);
+            // Maybe add bonus healing for critical success
+            _damageable.TryChangeDamage(target, component.CriticalSuccessHealBonus, true, origin: uid);
+        }
     }
 
     /// <summary>
@@ -143,12 +185,12 @@ public sealed class DefibrillatorSystem : EntitySystem
         _audio.PlayPvs(component.ChargeSound, uid);
         return _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, user, component.DoAfterDuration, new DefibrillatorZapDoAfterEvent(),
             uid, target, uid)
-            {
-                BlockDuplicate = true,
-                BreakOnHandChange = true,
-                NeedHand = true,
-                BreakOnMove = !component.AllowDoAfterMovement
-            });
+        {
+            BlockDuplicate = true,
+            BreakOnHandChange = true,
+            NeedHand = true,
+            BreakOnMove = !component.AllowDoAfterMovement
+        });
     }
 
     public void Zap(EntityUid uid, EntityUid target, EntityUid user, DefibrillatorComponent? component = null, MobStateComponent? mob = null, MobThresholdsComponent? thresholds = null)

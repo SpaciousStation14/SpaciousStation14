@@ -18,6 +18,7 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.PowerCell;
 using Content.Shared.Popups;
 using Content.Shared._Finster.Rulebook;
+using Content.Shared._Finster.Rulebook.Events;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
@@ -113,40 +114,6 @@ public sealed class HealthAnalyzerSystem : EntitySystem
 
         _audio.PlayPvs(uid.Comp.ScanningBeginSound, uid);
 
-        // Spacious - Skill Check test
-        var skillSystem = EntityManager.System<SharedSkillCheckSystem>();
-
-        // Skill-based check using FirstAid
-        if (!skillSystem.TrySkillCheck(
-            user: args.User,
-            skill: SkillType.FirstAid,  // Changed from AttributeType.Intelligence
-            out var critSuccess,
-            out var critFailure))
-        {
-            // Failure case (either normal or critical)
-            if (critFailure)
-            {
-                _popup.PopupEntity(Loc.GetString("healing-skill-critical-failure"), args.User);
-            }
-            else
-            {
-                _popup.PopupEntity(Loc.GetString("healing-skill-failure"), args.User);
-            }
-            return;
-        }
-        else
-        {
-            // Success case (either normal or critical)
-            if (critSuccess)
-            {
-                _popup.PopupEntity(Loc.GetString("healing-skill-critical-success"), args.User);
-            }
-            else
-            {
-                _popup.PopupEntity(Loc.GetString("healing-skill-success"), args.User);
-            }
-        }
-
         _doAfterSystem.TryStartDoAfter(new DoAfterArgs(EntityManager, args.User, uid.Comp.ScanDelay, new HealthAnalyzerDoAfterEvent(), uid, target: args.Target, used: uid)
         {
             NeedHand = true,
@@ -161,6 +128,44 @@ public sealed class HealthAnalyzerSystem : EntitySystem
 
         if (!uid.Comp.Silent)
             _audio.PlayPvs(uid.Comp.ScanningEndSound, uid);
+
+        // Create and raise the skill check event
+        var ev = new SkillTypeCheckEvent(
+            User: args.User,
+            Skill: SkillType.FirstAid,
+            SituationalBonus: 0,
+            CriticalSuccess: false,
+            CriticalFailure: false
+        );
+
+        RaiseLocalEvent(ref ev);
+
+        // Handle the skill check results
+        if (!ev.Result)
+        {
+            // Failure case (either normal or critical)
+            if (ev.CriticalFailure)
+            {
+                _popup.PopupEntity(Loc.GetString("healing-skill-critical-failure"), args.User);
+            }
+            else
+            {
+                _popup.PopupEntity(Loc.GetString("healing-skill-failure"), args.User);
+            }
+            return;
+        }
+        else
+        {
+            // Success case (either normal or critical)
+            if (ev.CriticalSuccess)
+            {
+                _popup.PopupEntity(Loc.GetString("healing-skill-critical-success"), args.User);
+            }
+            else
+            {
+                _popup.PopupEntity(Loc.GetString("healing-skill-success"), args.User);
+            }
+        }
 
         OpenUserInterface(args.User, uid);
         BeginAnalyzingEntity(uid, args.Target.Value);
