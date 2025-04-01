@@ -127,6 +127,7 @@ public abstract partial class SharedSurgerySystem : EntitySystem
             var ev = new SkillTypeCheckEvent(
                 User: args.User,
                 Skill: SkillType.Surgery,
+                ToolBonus: 0,
                 SituationalBonus: 0,
                 CriticalSuccess: false,
                 CriticalFailure: false

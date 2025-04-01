@@ -74,6 +74,7 @@ public sealed class HealingSystem : EntitySystem
             User: args.User,
             Skill: SkillType.FirstAid,
             SituationalBonus: 0,
+            ToolBonus: 0,
             CriticalSuccess: false,
             CriticalFailure: false
         );
@@ -103,7 +104,8 @@ public sealed class HealingSystem : EntitySystem
             }
             else
             {
-                _popupSystem.PopupEntity(Loc.GetString("healing-skill-success"), args.User);
+                _popupSystem.PopupEntity(Loc.GetString("healing-skill-success", ("bonus", ev.ToolBonus)),
+                 args.User);
             }
         }
 

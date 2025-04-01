@@ -169,6 +169,7 @@ public sealed class PryingSystem : EntitySystem
                 User: args.User,
                 Attribute: _Finster.Rulebook.AttributeType.Strength,
                 Bonus: 0,
+                ToolBonus: 0,
                 CriticalSuccess: false,
                 CriticalFailure: false
             );

@@ -81,6 +81,7 @@ public sealed class DefibrillatorSystem : EntitySystem
             User: args.User,
             Skill: SkillType.FirstAid,  // Or create a Defibrillation skill if needed
             SituationalBonus: 0,
+            ToolBonus: 0,
             CriticalSuccess: false,
             CriticalFailure: false
         );

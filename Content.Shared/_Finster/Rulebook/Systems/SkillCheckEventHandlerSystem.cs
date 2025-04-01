@@ -25,7 +25,7 @@ public sealed class SkillCheckEventHandlerSystem : EntitySystem
             return;
         }
 
-        var targetValue = stats.GetAttributeValue(ev.Attribute);
+        var targetValue = stats.GetAttributeValue(ev.Attribute) + ev.ToolBonus;
         bool critSuccess, critFail;
 
         ev.Result = _skillCheck.TryRawCheck(
@@ -58,7 +58,7 @@ public sealed class SkillCheckEventHandlerSystem : EntitySystem
             stats.GetAttributeValue(ev.Skill.GetBaseAttribute())
         );
         var skillModifier = stats.GetSkillModifier(ev.Skill, skillLevel);
-        var targetValue = 10 + attributeModifier + skillModifier + ev.SituationalBonus;
+        var targetValue = 10 + attributeModifier + skillModifier + ev.ToolBonus;
 
         bool critSuccess, critFail;
 

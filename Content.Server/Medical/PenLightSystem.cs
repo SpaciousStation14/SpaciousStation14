@@ -60,6 +60,7 @@ public sealed class PenLightSystem : EntitySystem
             User: args.User,
             Skill: SkillType.Diagnosis,
             SituationalBonus: 0,
+            ToolBonus: 0,
             CriticalSuccess: false,
             CriticalFailure: false
         );

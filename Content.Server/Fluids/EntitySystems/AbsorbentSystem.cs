@@ -110,6 +110,7 @@ public sealed partial class AbsorbentSystem : SharedAbsorbentSystem
                 User: user,
                 Skill: SkillType.Surgery,
                 SituationalBonus: 0,
+                ToolBonus: 0,
                 CriticalSuccess: false,
                 CriticalFailure: false
             );
