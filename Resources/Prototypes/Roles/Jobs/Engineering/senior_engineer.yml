@@ -19,16 +19,16 @@
       - Unemployed
   special:
     - !type:AddComponentSpecial
-      components:
-        - type: Statistics
-          attributes:
-            Strength: 10
-            Dexterity: 11
-            Intelligence: 13
-            Will: 9
-          skills:
-            Electrician: 2
-            Mechanic: 2
+    components:
+      - type: Statistics
+        attributes:
+          Strength: 10
+          Dexterity: 11
+          Intelligence: 13
+          Will: 9
+        skills:
+          Electrician: 2
+          Mechanic: 2
   startingGear: SeniorEngineerGear
   icon: "JobIconSeniorEngineer"
   supervisors: job-supervisors-ce

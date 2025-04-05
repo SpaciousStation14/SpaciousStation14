@@ -11,6 +11,7 @@
   - Maintenance
   - Clown # DeltaV - Add Clown access
   special:
+  special:
   - !type:AddComponentSpecial
     components:
       - type: Statistics

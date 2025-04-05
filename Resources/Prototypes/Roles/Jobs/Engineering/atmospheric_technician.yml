@@ -19,18 +19,17 @@
   - Engineering
   - External
   - Atmospherics
-  special:
-    - !type:AddComponentSpecial
-      components:
-        - type: Statistics
-          attributes:
-            Strength: 10
-            Dexterity: 11
-            Intelligence: 13
-            Will: 9
-          skills:
-            Electrician: 2
-            Mechanic: 2
+  - !type:AddComponentSpecial
+    components:
+      - type: Statistics
+        attributes:
+          Strength: 10
+          Dexterity: 11
+          Intelligence: 13
+          Will: 9
+        skills:
+          Electrician: 2
+          Mechanic: 2
 
 - type: startingGear
   id: AtmosphericTechnicianGear

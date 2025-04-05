@@ -18,17 +18,17 @@
       - Unemployed
   special:
     - !type:AddComponentSpecial
-      components:
-        - type: Statistics
-          attributes:
-            Strength: 10
-            Dexterity: 11
-            Intelligence: 11
-            Will: 9
-          skills:
-            Electrician: 1
-            Mechanic: 1
-            Housekeeping: 2
+    components:
+      - type: Statistics
+        attributes:
+          Strength: 10
+          Dexterity: 11
+          Intelligence: 11
+          Will: 9
+        skills:
+          Electrician: 1
+          Mechanic: 1
+          Housekeeping: 2
 
 - type: startingGear
   id: TechnicalAssistantGear
