@@ -4,7 +4,6 @@ using Content.Server.Medical.Components;
 using Content.Server.PowerCell;
 using Content.Server.Temperature.Components;
 using Content.Server.Traits.Assorted;
-using Content.Server.Popups;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Damage;
 using Content.Shared.DoAfter;
@@ -17,7 +16,6 @@ using Content.Shared.MedicalScanner;
 using Content.Shared.Mobs.Components;
 using Content.Shared.PowerCell;
 using Content.Shared.Popups;
-using Content.Shared._Finster.Rulebook;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
@@ -42,7 +40,6 @@ public sealed class HealthAnalyzerSystem : EntitySystem
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
     [Dependency] private readonly TransformSystem _transformSystem = default!;
     [Dependency] private readonly ItemToggleSystem _toggle = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
 
     public override void Initialize()
     {
@@ -112,40 +109,6 @@ public sealed class HealthAnalyzerSystem : EntitySystem
             return;
 
         _audio.PlayPvs(uid.Comp.ScanningBeginSound, uid);
-
-        // Spacious - Skill Check test
-        var skillSystem = EntityManager.System<SharedSkillCheckSystem>();
-
-        // Skill-based check using FirstAid
-        if (!skillSystem.TrySkillCheck(
-            user: args.User,
-            skill: SkillType.FirstAid,  // Changed from AttributeType.Intelligence
-            out var critSuccess,
-            out var critFailure))
-        {
-            // Failure case (either normal or critical)
-            if (critFailure)
-            {
-                _popup.PopupEntity(Loc.GetString("healing-skill-critical-failure"), args.User);
-            }
-            else
-            {
-                _popup.PopupEntity(Loc.GetString("healing-skill-failure"), args.User);
-            }
-            return;
-        }
-        else
-        {
-            // Success case (either normal or critical)
-            if (critSuccess)
-            {
-                _popup.PopupEntity(Loc.GetString("healing-skill-critical-success"), args.User);
-            }
-            else
-            {
-                _popup.PopupEntity(Loc.GetString("healing-skill-success"), args.User);
-            }
-        }
 
         _doAfterSystem.TryStartDoAfter(new DoAfterArgs(EntityManager, args.User, uid.Comp.ScanDelay, new HealthAnalyzerDoAfterEvent(), uid, target: args.Target, used: uid)
         {

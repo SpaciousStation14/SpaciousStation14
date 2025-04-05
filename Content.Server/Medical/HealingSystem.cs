@@ -17,7 +17,6 @@ using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Stacks;
-using Content.Shared._Finster.Rulebook;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Random;
 
@@ -66,41 +65,6 @@ public sealed class HealingSystem : EntitySystem
             !healing.DamageContainers.Contains(entity.Comp.DamageContainerID))
         {
             return;
-        }
-
-        // Spacious - Skill Check test
-        var skillSystem = EntityManager.System<SharedSkillCheckSystem>();
-
-        // Skill-based check using FirstAid
-        if (!skillSystem.TrySkillCheck(
-            user: args.User,
-            skill: SkillType.FirstAid,  // Changed from AttributeType.Intelligence
-            out var critSuccess,
-            out var critFailure))
-        {
-            // Failure case (either normal or critical)
-            if (critFailure)
-            {
-                _popupSystem.PopupEntity(Loc.GetString("healing-skill-critical-failure"), args.User);
-                QueueDel(args.Used.Value);
-            }
-            else
-            {
-                _popupSystem.PopupEntity(Loc.GetString("healing-skill-failure"), args.User);
-            }
-            return;
-        }
-        else
-        {
-            // Success case (either normal or critical)
-            if (critSuccess)
-            {
-                _popupSystem.PopupEntity(Loc.GetString("healing-skill-critical-success"), args.User);
-            }
-            else
-            {
-                _popupSystem.PopupEntity(Loc.GetString("healing-skill-success"), args.User);
-            }
         }
 
         // Heal some bloodloss damage.
@@ -229,10 +193,6 @@ public sealed class HealingSystem : EntitySystem
 
         if (TryComp<StackComponent>(uid, out var stack) && stack.Count < 1)
             return false;
-
-        // Spacious - Skill Check test
-        // Roll the dice
-        var skillSystem = EntityManager.System<SharedSkillCheckSystem>();
 
         var anythingToDo =
             HasDamage(targetDamage, component) ||

@@ -11,7 +11,6 @@ using Content.Shared.Medical;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Traits.Assorted.Components;
-using Content.Shared._Finster.Rulebook;
 using Robust.Server.GameObjects;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
@@ -88,41 +87,6 @@ public sealed class PenLightSystem : EntitySystem
             _popup.PopupEntity(Loc.GetString("penlight-cannot-examine-self"), uid, user);
             return false;
         }
-
-        // Spacious - Skill Check test
-        var skillSystem = EntityManager.System<SharedSkillCheckSystem>();
-
-        // Skill-based check using FirstAid
-        if (!skillSystem.TrySkillCheck(
-            user: user,
-            skill: SkillType.FirstAid,  // Changed from AttributeType.Intelligence
-            out var critSuccess,
-            out var critFailure))
-        {
-            // Failure case (either normal or critical)
-            if (critFailure)
-            {
-                _popup.PopupEntity(Loc.GetString("healing-skill-critical-failure"), uid, user);
-            }
-            else
-            {
-                _popup.PopupEntity(Loc.GetString("healing-skill-failure"), uid, user);
-            }
-            return true;
-        }
-        else
-        {
-            // Success case (either normal or critical)
-            if (critSuccess)
-            {
-                _popup.PopupEntity(Loc.GetString("healing-skill-critical-success"), uid, user);
-            }
-            else
-            {
-                _popup.PopupEntity(Loc.GetString("healing-skill-success"), uid, user);
-            }
-        }
-
         return _doAfter.TryStartDoAfter(new DoAfterArgs(EntityManager, user, component.ExamSpeed, new PenLightDoAfterEvent(),
             uid, target, uid)
         {
