@@ -32,10 +32,10 @@
       - Biological
     damage:
       types:
-        Heat: -15
-        Cold: -15
-        Shock: -15
-        Caustic: -15 #Was 5 per type & 1.5 caustic, Buffed due to limb damage changes
+        Heat: -10
+        Cold: -10
+        Shock: -10
+        Caustic: -5 #Was 5 per type & 1.5 caustic, Buffed due to limb damage changes
     healingBeginSound:
       path: "/Audio/Items/Medical/ointment_begin.ogg"
     healingEndSound:
@@ -45,9 +45,6 @@
     count: 15 #Was 10, Buffed due to limb damage changes
   - type: StackPrice
     price: 10 #Was 5, Buffed due to surgery changes
-  - type: ToolQuality
-    qualities:
-    - EasyTopical
 
 - type: entity
   id: Ointment1
@@ -86,10 +83,10 @@
       - Biological
     damage:
       types:
-        Heat: -45
-        Cold: -45
-        Shock: -45
-        Caustic: -45 #Was 10 per type, Buffed due to limb damage changes
+        Heat: -15
+        Cold: -15
+        Shock: -15
+        Caustic: -15 #Was 10 per type, Buffed due to limb damage changes
     healingBeginSound:
       path: "/Audio/Items/Medical/ointment_begin.ogg"
     healingEndSound:
@@ -99,9 +96,6 @@
     count: 15 #Was 10, Buffed due to limb damage changes
   - type: StackPrice
     price: 40 #Was 20, Buffed due to limb damage changes
-  - type: ToolQuality
-    qualities:
-    - AdvancedTopical
 
 - type: entity
   id: OintmentAdvanced1
@@ -129,7 +123,7 @@
       - Biological
     damage:
       groups:
-        Brute: -40 # was 5 (-15 Brute) for each, Buffed due to limb damage changes
+        Brute: -30 # was 5 (-15 Brute) for each, Buffed due to limb damage changes
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
     healingEndSound:
@@ -139,9 +133,6 @@
     count: 15 #Was 10, Buffed due to limb damage changes
   - type: StackPrice
     price: 10 #Was 5, Buffed due to limb damage changes
-  - type: ToolQuality
-    qualities:
-    - EasyTopical
 
 - type: entity
   id: Brutepack1
@@ -181,7 +172,7 @@
       - Biological
     damage:
       groups:
-        Brute: -60 # was 10 for each, now 20 for each type in the group, Buffed due to Limb Damage Changes
+        Brute: -45 # was 10 for each, now 20 for each type in the group, Buffed due to Limb Damage Changes
     bloodlossModifier: -10 # a suture should stop ongoing bleeding
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
@@ -192,9 +183,6 @@
     count: 15 #Was 10, Buffed due to surgery changes
   - type: StackPrice
     price: 40 #Was 20, Buffed due to limb damage changes
-  - type: ToolQuality
-    qualities:
-    - AdvancedTopical
 
 - type: entity
   id: BrutepackAdvanced1
@@ -222,7 +210,7 @@
       - Biological
     damage:
       types:
-        Bloodloss: -5 #lowers bloodloss damage, was .5, buffed due to Limb Damage Changes
+        Bloodloss: -2.5 #lowers bloodloss damage, was .5, buffed due to Limb Damage Changes
     ModifyBloodLevel: 30 #used to restore 5% blood per use, now restores about 10% blood per use on standard Buffed due to Limb Damage Changes
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
@@ -267,9 +255,6 @@
         path: "/Audio/Items/Medical/brutepack_begin.ogg"
       healingEndSound:
         path: "/Audio/Items/Medical/brutepack_end.ogg"
-    - type: ToolQuality
-      qualities:
-      - Idiotproof
 
 - type: entity
   name: roll of gauze
@@ -290,9 +275,9 @@
     damageContainers:
       - Biological
     damage:
-      groups:
-        Brute: -7
-        Burn: -7
+      types:
+        Slash: -10 # Was 5
+        Piercing: -15 # Was 10, Buffed due to limb damage changes
     bloodlossModifier: -10
     healingBeginSound:
       path: "/Audio/Items/Medical/brutepack_begin.ogg"
@@ -303,9 +288,6 @@
     count: 15 #Was 10, Buffed due to limb damage changes
   - type: StackPrice
     price: 20 #Was 10, Buffed due to limb damage changes
-  - type: ToolQuality
-    qualities:
-    - Idiotproof
 
 - type: entity
   id: Gauze1

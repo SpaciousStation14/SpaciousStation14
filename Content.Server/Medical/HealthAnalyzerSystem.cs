@@ -134,7 +134,6 @@ public sealed class HealthAnalyzerSystem : EntitySystem
             User: args.User,
             Skill: SkillType.FirstAid,
             SituationalBonus: 0,
-            ToolBonus: 0,
             CriticalSuccess: false,
             CriticalFailure: false
         );

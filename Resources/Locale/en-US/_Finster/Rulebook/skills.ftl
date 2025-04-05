@@ -1,1 +1,0 @@
-healing-skill-success = Success! {$bonus}

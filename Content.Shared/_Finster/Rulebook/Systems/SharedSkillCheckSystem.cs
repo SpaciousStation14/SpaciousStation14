@@ -20,7 +20,6 @@ public sealed class SharedSkillCheckSystem : EntitySystem
             User: user,
             Attribute: attribute,
             Bonus: bonus,
-            ToolBonus: 0,
             CriticalSuccess: false,
             CriticalFailure: false
         );
@@ -45,7 +44,6 @@ public sealed class SharedSkillCheckSystem : EntitySystem
         var ev = new SkillTypeCheckEvent(
             User: user,
             Skill: skill,
-            ToolBonus: 0,
             SituationalBonus: situationalBonus,
             CriticalSuccess: false,
             CriticalFailure: false
