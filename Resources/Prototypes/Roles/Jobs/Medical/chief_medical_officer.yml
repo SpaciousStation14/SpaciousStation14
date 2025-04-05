@@ -41,16 +41,6 @@
     - type: CPRTraining
     - type: SurgerySpeedModifier
       speedModifier: 2.5
-    - type: Statistics
-      attributes:
-        Strength: 8
-        Dexterity: 9
-        Intelligence: 13
-        Will: 8
-      skills:
-        FirstAid: 4
-        Diagnosis: 4
-        Surgery: 4
   afterLoadoutSpecial:
   - !type:ModifyEnvirosuitSpecial
     charges: 8

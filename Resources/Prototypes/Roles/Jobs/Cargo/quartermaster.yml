@@ -33,12 +33,6 @@
   - !type:AddComponentSpecial
     components:
       - type: CommandStaff
-      - type: Statistics
-        attributes:
-          Strength: 8
-          Dexterity: 8
-          Intelligence: 10
-          Will: 7
   afterLoadoutSpecial:
   - !type:ModifyEnvirosuitSpecial
     charges: 8

@@ -19,17 +19,6 @@
       inverted: true
       employers:
       - Unemployed
-  special:
-  - !type:AddComponentSpecial
-    components:
-      - type: Statistics
-        attributes:
-          Strength: 10
-          Dexterity: 10
-          Intelligence: 10
-          Will: 10
-        skills:
-          Housekeeping: 2
 
 - type: startingGear
   id: ServiceWorkerGear

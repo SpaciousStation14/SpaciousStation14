@@ -40,16 +40,6 @@
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
-  - !type:AddComponentSpecial
-    components:
-      - type: Statistics
-        attributes:
-          Strength: 16
-          Dexterity: 18
-          Intelligence: 8
-          Will: 7
-        skills:
-          FirstAid: 2
   afterLoadoutSpecial:
   - !type:ModifyEnvirosuitSpecial
     charges: 6

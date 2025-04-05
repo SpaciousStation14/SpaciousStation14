@@ -25,17 +25,6 @@
     - type: CPRTraining
     - type: SurgerySpeedModifier
       speedModifier: 1.5
-    - type: Statistics
-      attributes:
-        Strength: 8
-        Dexterity: 9
-        Intelligence: 11
-        Will: 8
-      skills:
-        FirstAid: 1
-        Diagnosis: 1
-        Surgery: 1
-        Housekeeping: 2
 
 - type: startingGear
   id: MedicalInternGear

@@ -32,15 +32,6 @@
     - type: CPRTraining
     - type: SurgerySpeedModifier
       speedModifier: 1.75
-    - type: Statistics
-      attributes:
-        Strength: 10
-        Dexterity: 11
-        Intelligence: 13
-        Will: 8
-      skills:
-        FirstAid: 3
-        Diagnosis: 3
 
 - type: startingGear
   id: ParamedicGear

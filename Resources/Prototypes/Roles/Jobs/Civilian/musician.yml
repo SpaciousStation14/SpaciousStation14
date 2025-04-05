@@ -14,14 +14,6 @@
   - !type:GiveItemOnHolidaySpecial
     holiday: MikuDay
     prototype: BoxPerformer
-  - !type:AddComponentSpecial
-    components:
-      - type: Statistics
-        attributes:
-          Strength: 10
-          Dexterity: 10
-          Intelligence: 10
-          Will: 10
   requirements:
     - !type:CharacterEmployerRequirement
       inverted: true

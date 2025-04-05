@@ -17,18 +17,6 @@
   access:
   - Research
   - Maintenance
-  special:
-  - !type:AddComponentSpecial
-  components:
-    - type: Statistics
-      attributes:
-        Strength: 8
-        Dexterity: 9
-        Intelligence: 12
-        Will: 8
-      skills:
-        Electrician: 2
-        Mechanic: 2
 
 - type: startingGear
   id: RoboticistGear

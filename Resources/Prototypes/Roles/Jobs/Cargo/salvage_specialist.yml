@@ -21,18 +21,6 @@
   - Salvage
   - Maintenance
   - External
-  special:
-  - !type:AddComponentSpecial
-    components:
-      - type: Statistics
-        attributes:
-          Strength: 13
-          Dexterity: 13
-          Intelligence: 10
-          Will: 7
-        skills:
-          FirstAid: 2
-          Diagnosis: 2
 
 - type: startingGear
   id: SalvageSpecialistGear

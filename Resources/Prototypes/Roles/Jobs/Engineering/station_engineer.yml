@@ -11,18 +11,6 @@
       inverted: true
       employers:
       - Unemployed
-  special:
-    - !type:AddComponentSpecial
-    components:
-      - type: Statistics
-        attributes:
-          Strength: 10
-          Dexterity: 11
-          Intelligence: 12
-          Will: 9
-        skills:
-          Electrician: 2
-          Mechanic: 2
   startingGear: StationEngineerGear
   icon: "JobIconStationEngineer"
   supervisors: job-supervisors-ce

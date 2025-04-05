@@ -115,6 +115,7 @@ public enum SkillType
 {
     /// <summary>
     /// It's First Aid. You should know what this is.
+    /// ranged weapon, and another calculations.
     /// </summary>
     [SkillDifficulty(SkillDifficulty.Easy)]
     [BaseAttribute(AttributeType.Intelligence)]
@@ -122,37 +123,9 @@ public enum SkillType
 
     /// <summary>
     /// Diagnosing Injuries. Using Medical equipment.
+    /// missing attacks (in melee combat).
     /// </summary>
     [SkillDifficulty(SkillDifficulty.Average)]
     [BaseAttribute(AttributeType.Intelligence)]
     Diagnosis,
-
-    /// <summary>
-    /// Like a surgeon, cutting for the very first time.
-    /// Like a suuuurrrrgen. Organ transplants, are my line.
-    /// </summary>
-    [SkillDifficulty(SkillDifficulty.VeryHard)]
-    [BaseAttribute(AttributeType.Intelligence)]
-    Surgery,
-
-    /// <summary>
-    /// Electrical shit, you know.
-    /// </summary>
-    [SkillDifficulty(SkillDifficulty.Easy)]
-    [BaseAttribute(AttributeType.Intelligence)]
-    Electrician,
-
-    /// <summary>
-    /// I know what's wrong wit it, it ain't got no gas in it
-    /// </summary>
-    [SkillDifficulty(SkillDifficulty.Average)]
-    [BaseAttribute(AttributeType.Intelligence)]
-    Mechanic,
-
-    /// <summary>
-    /// Cleaning.
-    /// </summary>
-    [SkillDifficulty(SkillDifficulty.Easy)]
-    [BaseAttribute(AttributeType.Intelligence)]
-    Housekeeping,
 }

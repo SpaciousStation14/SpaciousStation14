@@ -47,12 +47,6 @@
         - TelepathyPower
         - HealingWordPower
         - SummonRemiliaPower
-    - type: Statistics
-      attributes:
-        Strength: 9
-        Dexterity: 9
-        Intelligence: 11
-        Will: 14
 
 - type: startingGear
   id: ChaplainGear

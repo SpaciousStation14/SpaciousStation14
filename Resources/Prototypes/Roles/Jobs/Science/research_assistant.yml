@@ -19,19 +19,6 @@
   access:
   - Research
   - Maintenance
-  special:
-  - !type:AddComponentSpecial
-  components:
-    - type: Statistics
-      attributes:
-        Strength: 7
-        Dexterity: 8
-        Intelligence: 11
-        Will: 10
-      skills:
-        Electrician: 1
-        Mechanic: 1
-        Housekeeping: 2
 
 - type: startingGear
   id: ResearchAssistantGear

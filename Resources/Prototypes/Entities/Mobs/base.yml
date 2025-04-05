@@ -50,6 +50,12 @@
   - type: AnimatedEmotes
   - type: OwnInteractionVerbs
     allowedVerbs: [] # TODO: define something here, or don't.
+  - type: Statistics
+    attributes:
+      Strength: 10
+      Dexterity: 10
+      Intelligence: 10
+      Will: 10
 
 - type: entity
   save: false

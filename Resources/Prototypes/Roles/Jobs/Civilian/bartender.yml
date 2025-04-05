@@ -21,17 +21,6 @@
   extendedAccess:
   - Kitchen
   - Hydroponics
-  special:
-  - !type:AddComponentSpecial
-    components:
-      - type: Statistics
-        attributes:
-          Strength: 10
-          Dexterity: 10
-          Intelligence: 10
-          Will: 10
-        skills:
-          Housekeeping: 1
 
 - type: startingGear
   id: BartenderGear

@@ -59,19 +59,6 @@
   - !type:AddComponentSpecial
     components:
       - type: CommandStaff
-      - type: Statistics
-        attributes:
-          Strength: 9
-          Dexterity: 10
-          Intelligence: 11
-          Will: 7
-        skills:
-          FirstAid: 1
-          Diagnosis: 1
-          Surgery: 1
-          Electrician: 1
-          Mechanic: 1
-          Housekeeping: 1
   afterLoadoutSpecial:
   - !type:ModifyEnvirosuitSpecial
     charges: 8

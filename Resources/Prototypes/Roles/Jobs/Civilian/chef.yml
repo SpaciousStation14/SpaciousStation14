@@ -27,12 +27,6 @@
     - type: ProfessionalChef #Nyano - End Summary.
     - type: GrantCqc # Goobstation - Martial Arts
       isBlocked: true # Goobstation - Martial Arts
-    - type: Statistics
-      attributes:
-        Strength: 10
-        Dexterity: 10
-        Intelligence: 10
-        Will: 10
 
 - type: startingGear
   id: ChefGear

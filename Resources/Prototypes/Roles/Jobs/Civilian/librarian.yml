@@ -39,12 +39,6 @@
       powersToAdd:
         - XenoglossyPower
         - TelepathyPower
-    - type: Statistics
-      attributes:
-        Strength: 10
-        Dexterity: 10
-        Intelligence: 10
-        Will: 12
 
 
 - type: startingGear

@@ -30,16 +30,6 @@
     - type: CPRTraining
     - type: SurgerySpeedModifier
       speedModifier: 2.0
-    - type: Statistics
-      attributes:
-        Strength: 8
-        Dexterity: 9
-        Intelligence: 12
-        Will: 8
-      skills:
-        FirstAid: 3
-        Diagnosis: 3
-        Surgery: 3
 
 - type: startingGear
   id: SeniorPhysicianGear

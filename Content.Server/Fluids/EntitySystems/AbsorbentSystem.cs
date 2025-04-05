@@ -8,7 +8,6 @@ using Content.Shared.Fluids.Components;
 using Content.Shared.Interaction;
 using Content.Shared.Timing;
 using Content.Shared.Weapons.Melee;
-using Content.Shared._Finster.Rulebook;
 using Robust.Server.Audio;
 using Robust.Server.GameObjects;
 using Robust.Shared.Map.Components;
@@ -105,40 +104,6 @@ public sealed partial class AbsorbentSystem : SharedAbsorbentSystem
 
     public void Mop(EntityUid user, EntityUid target, EntityUid used, AbsorbentComponent component)
     {
-        // Spacious - Skill Check test
-        var skillSystem = EntityManager.System<SharedSkillCheckSystem>();
-
-        // Skill-based check using FirstAid
-        if (!skillSystem.TrySkillCheck(
-            user: user,
-            skill: SkillType.Housekeeping,
-            out var critSuccess,
-            out var critFailure))
-        {
-            // Failure case (either normal or critical)
-            if (critFailure)
-            {
-                _popups.PopupEntity(Loc.GetString("cleaning-skill-critical-failure"), user);
-            }
-            else
-            {
-                _popups.PopupEntity(Loc.GetString("cleaning-skill-failure"), user);
-            }
-            return;
-        }
-        else
-        {
-            // Success case (either normal or critical)
-            if (critSuccess)
-            {
-                _popups.PopupEntity(Loc.GetString("cleaning-skill-critical-success"), user);
-            }
-            else
-            {
-                _popups.PopupEntity(Loc.GetString("cleaning-skill-success"), user);
-            }
-        }
-
         if (!_solutionContainerSystem.TryGetSolution(used, AbsorbentComponent.SolutionName, out var absorberSoln))
             return;
 
