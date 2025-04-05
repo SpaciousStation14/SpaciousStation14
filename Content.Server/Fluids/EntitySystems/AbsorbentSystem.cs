@@ -9,7 +9,6 @@ using Content.Shared.Interaction;
 using Content.Shared.Timing;
 using Content.Shared.Weapons.Melee;
 using Content.Shared._Finster.Rulebook;
-using Content.Shared._Finster.Rulebook.Events;
 using Robust.Server.Audio;
 using Robust.Server.GameObjects;
 using Robust.Shared.Map.Components;
@@ -106,34 +105,38 @@ public sealed partial class AbsorbentSystem : SharedAbsorbentSystem
 
     public void Mop(EntityUid user, EntityUid target, EntityUid used, AbsorbentComponent component)
     {
-        var ev = new SkillTypeCheckEvent(
-                User: user,
-                Skill: SkillType.Surgery,
-                SituationalBonus: 0,
-                CriticalSuccess: false,
-                CriticalFailure: false
-            );
+        // Spacious - Skill Check test
+        var skillSystem = EntityManager.System<SharedSkillCheckSystem>();
 
-        RaiseLocalEvent(ref ev);
-
-        // Handle skill check results
-        if (!ev.Result)
+        // Skill-based check using FirstAid
+        if (!skillSystem.TrySkillCheck(
+            user: user,
+            skill: SkillType.Housekeeping,
+            out var critSuccess,
+            out var critFailure))
         {
-            // Failed the skill check
-            if (ev.CriticalFailure)
+            // Failure case (either normal or critical)
+            if (critFailure)
             {
-                _popups.PopupEntity(Loc.GetString("cleaning-critical-failure"), user, user);
+                _popups.PopupEntity(Loc.GetString("cleaning-skill-critical-failure"), user);
             }
             else
             {
-                _popups.PopupEntity(Loc.GetString("cleaning-failure"), user, user);
+                _popups.PopupEntity(Loc.GetString("cleaning-skill-failure"), user);
             }
             return;
         }
-
-        if (ev.CriticalSuccess)
+        else
         {
-            _popups.PopupEntity(Loc.GetString("cleaning-critical-success"), user, user);
+            // Success case (either normal or critical)
+            if (critSuccess)
+            {
+                _popups.PopupEntity(Loc.GetString("cleaning-skill-critical-success"), user);
+            }
+            else
+            {
+                _popups.PopupEntity(Loc.GetString("cleaning-skill-success"), user);
+            }
         }
 
         if (!_solutionContainerSystem.TryGetSolution(used, AbsorbentComponent.SolutionName, out var absorberSoln))

@@ -24,7 +24,6 @@ using Robust.Shared.Random;
 // Shitmed Change
 using Content.Shared.Body.Systems;
 using Content.Shared._Shitmed.Targeting;
-using Content.Shared._Finster.Rulebook.Events;
 
 namespace Content.Server.Medical;
 
@@ -69,24 +68,21 @@ public sealed class HealingSystem : EntitySystem
             return;
         }
 
-        // Create and raise the skill check event
-        var ev = new SkillTypeCheckEvent(
-            User: args.User,
-            Skill: SkillType.FirstAid,
-            SituationalBonus: 0,
-            CriticalSuccess: false,
-            CriticalFailure: false
-        );
+        // Spacious - Skill Check test
+        var skillSystem = EntityManager.System<SharedSkillCheckSystem>();
 
-        RaiseLocalEvent(ref ev);
-
-        // Handle the skill check results
-        if (!ev.Result)
+        // Skill-based check using FirstAid
+        if (!skillSystem.TrySkillCheck(
+            user: args.User,
+            skill: SkillType.FirstAid,  // Changed from AttributeType.Intelligence
+            out var critSuccess,
+            out var critFailure))
         {
             // Failure case (either normal or critical)
-            if (ev.CriticalFailure)
+            if (critFailure)
             {
                 _popupSystem.PopupEntity(Loc.GetString("healing-skill-critical-failure"), args.User);
+                QueueDel(args.Used.Value);
             }
             else
             {
@@ -97,7 +93,7 @@ public sealed class HealingSystem : EntitySystem
         else
         {
             // Success case (either normal or critical)
-            if (ev.CriticalSuccess)
+            if (critSuccess)
             {
                 _popupSystem.PopupEntity(Loc.GetString("healing-skill-critical-success"), args.User);
             }

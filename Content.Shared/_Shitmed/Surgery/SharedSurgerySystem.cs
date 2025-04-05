@@ -21,16 +21,12 @@ using Content.Shared.Inventory;
 using Content.Shared.Popups;
 using Content.Shared.Prototypes;
 using Content.Shared.Standing;
-using Content.Shared._Finster.Rulebook;
-using Content.Shared._Finster.Rulebook.Events;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Map;
 using Robust.Shared.Network;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
-using Robust.Shared.GameObjects;
-using Robust.Shared.Player;
 
 namespace Content.Shared._Shitmed.Medical.Surgery;
 
@@ -102,7 +98,7 @@ public abstract partial class SharedSurgerySystem : EntitySystem
 
     private void OnTargetDoAfter(Entity<SurgeryTargetComponent> ent, ref SurgeryDoAfterEvent args)
     {
-        if (!_timing.IsFirstTimePredicted && !_net.IsServer)
+        if (!_timing.IsFirstTimePredicted)
             return;
 
         if (args.Cancelled)
@@ -122,48 +118,11 @@ public abstract partial class SharedSurgerySystem : EntitySystem
             return;
         }
 
-        if (_net.IsServer)
-        {
-            var ev = new SkillTypeCheckEvent(
-                User: args.User,
-                Skill: SkillType.Surgery,
-                SituationalBonus: 0,
-                CriticalSuccess: false,
-                CriticalFailure: false
-            );
-
-            RaiseLocalEvent(ref ev);
-
-            // Handle skill check results
-            if (!ev.Result)
-            {
-                // Failed the skill check
-                if (ev.CriticalFailure)
-                {
-                    _popup.PopupEntity(Loc.GetString("surgery-critical-failure"), args.User, args.User);
-                }
-                else
-                {
-                    _popup.PopupEntity(Loc.GetString("surgery-failure"), args.User, args.User);
-                }
-                var failEv = new SurgeryStepFailedEvent(args.User, ent, args.Surgery, args.Step);
-                RaiseLocalEvent(args.User, ref failEv);
-                args.Handled = true;
-                return;
-            }
-
-            if (ev.CriticalSuccess)
-            {
-                _popup.PopupEntity(Loc.GetString("surgery-critical-success"), args.User, args.User);
-            }
-        }
-
-
         var complete = IsStepComplete(ent, part, args.Step, surgery);
         args.Repeat = HasComp<SurgeryRepeatableStepComponent>(step) && !complete;
-        var stepevent = new SurgeryStepEvent(args.User, ent, part, GetTools(args.User), surgery, step, complete);
-        RaiseLocalEvent(step, ref stepevent);
-        RaiseLocalEvent(args.User, ref stepevent);
+        var ev = new SurgeryStepEvent(args.User, ent, part, GetTools(args.User), surgery, step, complete);
+        RaiseLocalEvent(step, ref ev);
+        RaiseLocalEvent(args.User, ref ev);
         RefreshUI(ent);
     }
 
